@@ -19,19 +19,21 @@
     <div class="chart-container">
       <canvas id="mycanvas"></canvas>
     </div>
+    
+    <div class="p-t-50 p-b-60">
+      <form class="contact100-form validate-form">
+        <div class="wrap-input100 m-b-10 validate-input" data-validate = "Price is required">
+          <input class="s2-txt1 placeholder0 input100" type="text" name="name" placeholder="Price" autocomplete="off">
+          <span class="focus-input100"></span>
+        </div>
 
-    <form class="contact100-form validate-form">
-      <div class="wrap-input100 m-b-10 validate-input" data-validate = "Price is required">
-        <input class="s2-txt1 placeholder0 input100" type="text" name="name" placeholder="Price" autocomplete="off">
-        <span class="focus-input100"></span>
-      </div>
-
-      <div class="w-full">
-        <button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04">
-          Submit
-        </button>
-      </div>
-    </form>
+        <div class="w-full">
+          <button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
     
     <!-- javascript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
