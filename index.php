@@ -16,6 +16,28 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
+    <script>
+      function submit() {
+        $("form").submit(function(e) {
+          e.preventDefault();
+          $.ajax({
+            type: 'POST',
+            url: 'adddata.php',
+            data: $('form').serialize(),
+            success: function() {
+              console.log("Signup was successful");
+            },
+            error: function() {
+              console.log("Signup was unsuccessful");
+            }
+          });
+        });
+      }
+
+      $(document).ready(function() {
+        submit();
+      });
+    </script>
     <center>
       <div class="chart-container" style="margin-top: 10em;">
         <canvas id="mycanvas"></canvas>
@@ -37,16 +59,6 @@
       </div>
       
       <!-- javascript -->
-      <script>
-        $('#post_price > button').click(function(e) {
-            e.preventDefault(); //prevent default behaviour
-            var formData = $('#post_price').serialize() //serialize data from form
-            $.ajax({
-                //everything as before
-                data: formData
-            });
-        });
-      </script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script type="text/javascript" src="js/linegraph.js"></script>
