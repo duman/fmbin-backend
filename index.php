@@ -50,7 +50,7 @@
         <canvas id="mycanvas"></canvas>
       </div>
       
-      <div class="p-t-50 p-b-60" style="width: 40em;">
+      <div class="p-t-50 p-b-60">
         <form class="contact100-form validate-form" id="post_price">
           <div class="wrap-input100 m-b-10 validate-input" data-validate = "Price is required">
             <input class="s2-txt1 placeholder0 input100" type="text" name="price" placeholder="Price" autocomplete="off">
