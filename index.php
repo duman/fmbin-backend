@@ -15,9 +15,8 @@
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
-  <body>
-    <center>
-      <p class="m1-txt1 p-b-36" style="margin-top: 10em;">
+  <body style="position: absolute; left: 36%; height: 100%;">
+      <p class="m1-txt1 p-b-36">
       <?php
       $servername = "localhost";
       $username = "admin_fmbin";
@@ -122,6 +121,5 @@
         });
       });
     </script>
-    <center>
   </body>
 </html>
