@@ -11,7 +11,7 @@ function getParameterByName(name, url) {
 $(document).ready(function(){
   var player_id = getParameterByName('player_id');
   $.ajax({
-    url : "../data.php?" + player_id,
+    url : "../data.php?player_id=" + player_id,
     type : "GET",
     success : function(data){
       console.log(data);
