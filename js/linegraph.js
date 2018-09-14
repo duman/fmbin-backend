@@ -5,16 +5,16 @@ $(document).ready(function(){
     success : function(data){
       console.log(data);
 
-      var player_id = [];
+      var last_report = [];
       var price_value = [];
 
       for(var i in data) {
-        player_id.push("UserID " + data[i].player_id);
+        last_report.push(data[i].last_report);
         price_value.push(data[i].price_value);
       }
 
       var chartdata = {
-        labels: player_id,
+        labels: last_report,
         datasets: [
           {
             label: "value",

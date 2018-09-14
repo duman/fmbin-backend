@@ -16,7 +16,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT player_id, player_name, price_value FROM players");
+$query = sprintf("SELECT player_id, price_value, last_report FROM players"); // add WHERE = player_id = "434" to make it runnable with any distinct player
 
 //execute query
 $result = $mysqli->query($query);
