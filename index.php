@@ -22,18 +22,27 @@
       </div>
       
       <div class="p-t-50 p-b-60" style="width: 40em;">
-        <form action="adddata.php" method="post" class="contact100-form validate-form">
+        <form action="adddata.php" method="post" class="contact100-form validate-form" id="post_price">
           <div class="wrap-input100 m-b-10 validate-input" data-validate = "Price is required">
             <input class="s2-txt1 placeholder0 input100" type="text" name="price" placeholder="Price" autocomplete="off">
             <span class="focus-input100"></span>
           </div>
 
           <div class="w-full">
-            <button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04">
+            <button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit" name="submit">
               Submit
             </button>
           </div>
         </form>
+
+        <script>
+          $('#post_price').submit(function() {
+            var post_data = $('#post_price').serialize();
+            $.post('adddata.php', post_data, function(data) {
+              $('#notification').show();
+            });
+          });
+        </script>
       </div>
       
       <!-- javascript -->
