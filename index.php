@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body class="center">
-      <p class="m1-txt1 p-b-36" style="padding-top: 5em;">
+      <p class="m1-txt1 p-b-36" style="padding-top: 5em; text-align: center;">
       <?php
       $servername = "localhost";
       $username = "admin_fmbin";
