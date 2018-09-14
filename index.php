@@ -1,32 +1,3 @@
-<?php
-$servername = "localhost";
-$username = "admin_fmbin";
-$password = "anka0606ankA";
-$dbname = "admin_fmbin";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$player_id = mysqli_real_escape_string($conn, $_REQUEST['player_id']);
-
-$sql = "SELECT player_id, name, pos, ovr FROM information WHERE player_id=" . $player_id;
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["player_id"]. " - Name: " . $row["name"]. " " . $row["pos"]. " " . $row["ovr"] . "<br>";
-    }
-} else {
-    echo "0 results";
-}
-$conn->close();
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -46,6 +17,34 @@ $conn->close();
   </head>
   <body>
     <center>
+      <?php
+      $servername = "localhost";
+      $username = "admin_fmbin";
+      $password = "anka0606ankA";
+      $dbname = "admin_fmbin";
+
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
+
+      $player_id = mysqli_real_escape_string($conn, $_REQUEST['player_id']);
+
+      $sql = "SELECT player_id, name, pos, ovr FROM information WHERE player_id=" . $player_id;
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+              echo "id: " . $row["player_id"]. " - Name: " . $row["name"]. " " . $row["pos"]. " " . $row["ovr"] . "<br>";
+          }
+      } else {
+          echo "0 results";
+      }
+      $conn->close();
+      ?>
       <div class="chart-container" style="margin-top: 10em;">
         <canvas id="mycanvas"></canvas>
       </div>
