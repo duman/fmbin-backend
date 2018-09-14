@@ -46,12 +46,23 @@
       <script src="vendor/select2/select2.min.js"></script>
       <script src="js/main.js"></script>
       <script>
+      function getParameterByName(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, '\\$&');
+          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
+
       function submit() {
+        var player_id = getParameterByName('player_id');
         $("form").submit(function(e) {
           e.preventDefault();
           $.ajax({
             type: 'POST',
-            url: 'adddata.php',
+            url: 'adddata.php?player_id=' + player_id,
             data: $('form').serialize(),
             success: function() {
               console.log("Data was added successfully");
