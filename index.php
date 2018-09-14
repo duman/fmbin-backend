@@ -32,13 +32,13 @@
 
       $player_id = mysqli_real_escape_string($conn, $_REQUEST['player_id']);
 
-      $sql = "SELECT player_id, name, pos, ovr FROM information WHERE player_id=" . $player_id;
+      $sql = "SELECT name, pos, ovr FROM information WHERE player_id=" . $player_id;
       $result = $conn->query($sql);
 
       if ($result->num_rows > 0) {
           // output data of each row
           while($row = $result->fetch_assoc()) {
-              echo "<b>ID:</b> " . $row["player_id"]. " - <b>Name:</b> " . $row["name"]. " - <b>Position:</b> " . $row["pos"]. " - <b>Overall:</b> " . $row["ovr"] . "<br>";
+              echo "<b>Name:</b> " . $row["name"]. " - <b>Position:</b> " . $row["pos"]. " - <b>Overall:</b> " . $row["ovr"] . "<br>";
           }
       } else {
           echo "0 results";
