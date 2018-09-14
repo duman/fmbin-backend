@@ -6,6 +6,7 @@ if($link === false){
 }
 
 $price = mysqli_real_escape_string($link, $_REQUEST['price']);
+$price = str_replace(array('.', ','), '' , $price);
 $date = date("Y-m-d H:i:s", $current_timestamp);
 
 $sql = "INSERT INTO players (player_id, price_value) VALUES ('1','$price')"; //2nd value represents player_id, should be dynamic
