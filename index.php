@@ -43,6 +43,19 @@
       } else {
           echo "0 results";
       }
+
+      $sql = "SELECT MAX(price_value), MIN(price_value) FROM players WHERE player_id =" . $player_id;
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+              echo "<b>Highest Price:</b> " . $row["MAX(price_value)"]. "<br><b>Lowest Price:</b> " . $row["MIN(price_value)"] . "<br>";
+          }
+      } else {
+          echo "Could not retrieve price data.";
+      }
+
       $conn->close();
       ?>
       </p>
