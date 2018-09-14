@@ -1,2 +1,7 @@
-#RewriteEngine On
-#RewriteRule ^(.*)$ index.php?url=$1 [L,QSA]
+Options +FollowSymLinks
+RewriteEngine On
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^data/(.*)$ ./index.php?player_id=$1
