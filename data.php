@@ -16,7 +16,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT price_value, player_name FROM players");
+$query = sprintf("SELECT player_id, player_name, price_value FROM players");
 
 //execute query
 $result = $mysqli->query($query);
