@@ -14,21 +14,6 @@
     <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script>
-      $(function () {
-        $('form').on('submit', function (e) {
-          e.preventDefault();
-          $.ajax({
-            type: 'post',
-            url: 'adddata.php',
-            data: $('form').serialize(),
-            success: function () {
-              alert('form is submitted');
-            }
-          });
-        });
-      });
-    </script>
   </head>
   <body>
     <center>
@@ -44,7 +29,7 @@
           </div>
 
           <div class="w-full">
-            <button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit" type="submit">
+            <button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit" name="submit" type="submit">
               Submit
             </button>
           </div>
@@ -52,6 +37,16 @@
       </div>
       
       <!-- javascript -->
+      <script>
+        $('#post_price > button').click(function(e) {
+            e.preventDefault(); //prevent default behaviour
+            var formData = $('#post_price').serialize() //serialize data from form
+            $.ajax({
+                //everything as before
+                data: formData
+            });
+        });
+      </script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script type="text/javascript" src="js/linegraph.js"></script>
