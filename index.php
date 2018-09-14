@@ -50,7 +50,7 @@
       if ($result->num_rows > 0) {
           // output data of each row
           while($row = $result->fetch_assoc()) {
-              echo "<b>Highest Price:</b> " . $row["MAX(price_value)"]. "<br><b>Lowest Price:</b> " . $row["MIN(price_value)"] . "<br>";
+              echo "<br><b>Highest Price:</b> " . number_format($row["MAX(price_value)"]) . "<br><b>Lowest Price:</b> " . number_format($row["MIN(price_value)"]) . "<br>";
           }
       } else {
           echo "Could not retrieve price data.";
