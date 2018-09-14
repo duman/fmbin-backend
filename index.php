@@ -16,28 +16,6 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    <script>
-      function submit() {
-        $("form").submit(function(e) {
-          e.preventDefault();
-          $.ajax({
-            type: 'POST',
-            url: 'adddata.php',
-            data: $('form').serialize(),
-            success: function() {
-              console.log("Signup was successful");
-            },
-            error: function() {
-              console.log("Signup was unsuccessful");
-            }
-          });
-        });
-      }
-
-      $(document).ready(function() {
-        submit();
-      });
-    </script>
     <center>
       <div class="chart-container" style="margin-top: 10em;">
         <canvas id="mycanvas"></canvas>
@@ -67,6 +45,28 @@
       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
       <script src="vendor/select2/select2.min.js"></script>
       <script src="js/main.js"></script>
+      <script>
+      function submit() {
+        $("form").submit(function(e) {
+          e.preventDefault();
+          $.ajax({
+            type: 'POST',
+            url: 'adddata.php',
+            data: $('form').serialize(),
+            success: function() {
+              console.log("Signup was successful");
+            },
+            error: function() {
+              console.log("Signup was unsuccessful");
+            }
+          });
+        });
+      }
+
+      $(document).ready(function() {
+        submit();
+      });
+    </script>
     </center>
   </body>
 </html>
