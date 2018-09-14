@@ -7,7 +7,7 @@ if($link === false){
 
 $price = mysqli_real_escape_string($link, $_REQUEST['price']);
 
-$sql = "INSERT INTO players (id, player_id, price_value, last_report) VALUES ('null', '1','$price','CURRENT_TIMESTAMP')"; //2nd value represents player_id, should be dynamic
+$sql = "INSERT INTO players (id, player_id, price_value, last_report) VALUES ('0', '1','$price','CURRENT_TIMESTAMP')"; //2nd value represents player_id, should be dynamic
 
 if(mysqli_query($link, $sql)){
 	echo "Records added successfully.";
