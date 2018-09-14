@@ -39,7 +39,7 @@
       if ($result->num_rows > 0) {
           // output data of each row
           while($row = $result->fetch_assoc()) {
-              echo "id: " . $row["player_id"]. " - Name: " . $row["name"]. " " . $row["pos"]. " " . $row["ovr"] . "<br>";
+              echo "<b>ID:</b> " . $row["player_id"]. " - <b>Name:</b> " . $row["name"]. " - <b>Position:</b> " . $row["pos"]. " - <b>Overall:</b> " . $row["ovr"] . "<br>";
           }
       } else {
           echo "0 results";
