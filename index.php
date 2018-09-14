@@ -14,6 +14,21 @@
     <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script>
+      $(function () {
+        $('form').on('submit', function (e) {
+          e.preventDefault();
+          $.ajax({
+            type: 'post',
+            url: 'adddata.php',
+            data: $('form').serialize(),
+            success: function () {
+              alert('form is submitted');
+            }
+          });
+        });
+      });
+    </script>
   </head>
   <body>
     <center>
@@ -29,20 +44,11 @@
           </div>
 
           <div class="w-full">
-            <button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit" name="submit">
+            <button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit" type="submit">
               Submit
             </button>
           </div>
         </form>
-
-        <script>
-          $('#post_price').submit(function() {
-            var post_data = $('#post_price').serialize();
-            $.post('adddata.php', post_data, function(data) {
-              $('#notification').show();
-            });
-          });
-        </script>
       </div>
       
       <!-- javascript -->
