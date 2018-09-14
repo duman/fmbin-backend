@@ -17,7 +17,7 @@ $(document).ready(function(){
         labels: last_report,
         datasets: [
           {
-            label: "value",
+            label: "Price",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(59, 89, 152, 0.75)",
