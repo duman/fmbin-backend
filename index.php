@@ -59,7 +59,6 @@
             },
             error: function() {
               console.log("Could not add the data");
-              location.reload();
             }
           });
         });
