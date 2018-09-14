@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
-  <body style="position: absolute; left: 36%; height: 100%;">
+  <body class="center">
       <p class="m1-txt1 p-b-36">
       <?php
       $servername = "localhost";
