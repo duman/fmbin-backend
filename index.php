@@ -15,8 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
-  <body>
-    <center>
+  <body class="center">
       <p class="m1-txt1 p-b-36" style="margin-top: 10em;">
       <?php
       $servername = "localhost";
@@ -122,6 +121,5 @@
         });
       });
     </script>
-    </center>
   </body>
 </html>
