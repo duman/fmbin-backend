@@ -65,6 +65,7 @@
 
       $(document).ready(function() {
         submit();
+        location.reload();
       });
     </script>
     </center>
