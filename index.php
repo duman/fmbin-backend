@@ -17,6 +17,7 @@
   </head>
   <body>
     <center>
+      <p class="m1-txt1 p-b-36">
       <?php
       $servername = "localhost";
       $username = "admin_fmbin";
@@ -45,6 +46,7 @@
       }
       $conn->close();
       ?>
+      </p>
       <div class="chart-container" style="margin-top: 10em;">
         <canvas id="mycanvas"></canvas>
       </div>
