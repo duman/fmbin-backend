@@ -54,10 +54,12 @@
             url: 'adddata.php',
             data: $('form').serialize(),
             success: function() {
-              console.log("Signup was successful");
+              console.log("Data was added successfully");
+              location.reload();
             },
             error: function() {
-              console.log("Signup was unsuccessful");
+              console.log("Could not add the data");
+              location.reload();
             }
           });
         });
@@ -65,7 +67,6 @@
 
       $(document).ready(function() {
         submit();
-        location.reload();
       });
     </script>
     </center>
