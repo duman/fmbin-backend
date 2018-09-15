@@ -114,6 +114,33 @@
                     delete LineGraph;
                     removeElement('mycanvas');
                     $('#chart-container').append('<canvas id="mycanvas"></canvas>');
+                    removeElement('card-info');
+                    var cname = [];
+                    var pos = [];
+                    var ovr = [];
+                    var max_value = [];
+                    var avg_value = [];
+                    var min_value = [];
+
+                    $.ajax({
+                      url : "../informationdata.php?player_id=" + player_id,
+                      type : "GET",
+                      success : function(data){
+                        for(var i in data) {
+                          cname.push(data[i].cname);
+                          pos.push(data[i].pos);
+                          ovr.push(data[i].ovr);
+                          max_value.push(data[i].max_value);
+                          avg_value.push(data[i].avg_value);
+                          min_value.push(data[i].min_value);
+                        }
+
+                        $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 5em; text-align: center;"><b>' + cname[0] + '</b><br><b>Position:</b> ' + pos[0] + ' - <b>Overall:</b> ' + ovr[0] + '<br><br><b>Highest Price:</b> ' + number_format(max_value[0], 0) + '<br><b>Average Price:</b> ' + number_format(avg_value[0], 0) + '<br><b>Lowest Price:</b> ' + number_format(min_value[0], 0) + '</p></div>');
+                      },
+                      error : function(data) {
+                      }
+                    });
+                    
                     document.getElementById('input-data').value = '';
                     ctx = $("#mycanvas");
 
