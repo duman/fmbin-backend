@@ -18,49 +18,6 @@
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
-      <p class="m1-txt1 p-b-36" style="padding-top: 5em; text-align: center;">
-      <?php
-      $servername = "localhost";
-      $username = "admin_fmbin";
-      $password = "anka0606ankA";
-      $dbname = "admin_fmbin";
-
-      // Create connection
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      // Check connection
-      if ($conn->connect_error) {
-          die("Connection failed: " . $conn->connect_error);
-      }
-
-      $player_id = mysqli_real_escape_string($conn, $_REQUEST['player_id']);
-
-      $sql = "SELECT cname, pos, ovr FROM information WHERE player_id=" . $player_id;
-      $result = $conn->query($sql);
-
-      if ($result->num_rows > 0) {
-          // output data of each row
-          while($row = $result->fetch_assoc()) {
-              echo "<b>" . $row["cname"]. "</b><br><b>Position:</b> " . $row["pos"]. " - <b>Overall:</b> " . $row["ovr"] . "<br>";
-          }
-      } else {
-          echo "0 results";
-      }
-
-      $sql = "SELECT MAX(price_value), AVG(price_value), MIN(price_value) FROM players WHERE player_id =" . $player_id;
-      $result = $conn->query($sql);
-
-      if ($result->num_rows > 0) {
-          // output data of each row
-          while($row = $result->fetch_assoc()) {
-              echo "<br><b>Highest Price:</b> " . number_format($row["MAX(price_value)"]) . "<br><b>Average Price:</b> " . number_format($row["AVG(price_value)"]) . "<br><b>Lowest Price:</b> " . number_format($row["MIN(price_value)"]) . "<br>";
-          }
-      } else {
-          echo "Could not retrieve price data.";
-      }
-
-      $conn->close();
-      ?>
-      </p>
       <div class="chart-container" id="chart-container">
         <canvas id="mycanvas"></canvas>
       </div>

@@ -14,17 +14,23 @@ $(document).ready(function(){
     url : "../informationdata.php?player_id=" + player_id,
     type : "GET",
     success : function(data){
-      cname = [];
-      pos = [];
-      ovr = [];
+      var cname = [];
+      var pos = [];
+      var ovr = [];
+      var max_value = [];
+      var avg_value = [];
+      var min_value = [];
 
       for(var i in data) {
         cname.push(data[i].cname);
         pos.push(data[i].pos);
         ovr.push(data[i].ovr);
+        max_value.push(data[i].MAX(price_value))
+        avg_value.push(data[i].AVG(price_value))
+        min_value.push(data[i].MIN(price_value))
       }
 
-      $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 5em; text-align: center;"><b>' + cname[0] + '</b><br><b>Position:</b> ' + pos[0] + ' - <b>Overall:</b> ' + ovr[0] + '</p></div>');
+      $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 5em; text-align: center;"><b>' + cname[0] + '</b><br><b>Position:</b> ' + pos[0] + ' - <b>Overall:</b> ' + ovr[0] + '<br><br><b>Highest Price:</b> ' + max_value[0] + '<br><b>Average Price:</b>' + avg_value[0] + '<br><b>Lowest Price:</b> ' + min_value[0] + '</p></div>');
     },
     error : function(data) {
     }
