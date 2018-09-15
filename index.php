@@ -109,6 +109,7 @@
             data: $('form').serialize(),
             success: function() {
               console.log("Data has been added successfully");
+              document.getElementById("mycanvas").outerHTML = "";
               var player_id = getParameterByName('player_id');
               $.ajax({
                 url : "../data.php?player_id=" + player_id,
