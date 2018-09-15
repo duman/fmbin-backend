@@ -59,7 +59,7 @@
       $conn->close();
       ?>
       </p>
-      <div class="chart-container">
+      <div class="chart-container" id="chart-container">
         <canvas id="mycanvas"></canvas>
       </div>
       
@@ -107,6 +107,11 @@
           chart.update();
       }
 
+      function removeElement(id) {
+          var elem = document.getElementById(id);
+          return elem.parentNode.removeChild(elem);
+      }
+
       function submit() {
         var player_id = getParameterByName('player_id');
         $("form").submit(function(e) {
@@ -148,14 +153,14 @@
                   removeData(LineGraph);
                   LineGraph.destroy();
                   delete LineGraph;
-                  $("#mycanvas").load(location.href+" #mycanvas>*","");
+                  removeElement('mycanvas');
+                  $('#chart-container').append('<canvas id="mycanvas"></canvas>');
                   ctx = $("#mycanvas");
 
                   LineGraph = new Chart(ctx, {
                     type: 'line',
                     data: chartdata
                   });
-                  $("#mycanvas").load(location.href+" #mycanvas>*","");
                 },
                 error : function(data) {
                 }
