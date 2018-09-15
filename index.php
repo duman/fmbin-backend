@@ -107,8 +107,8 @@
             url: 'adddata.php?player_id=' + player_id,
             data: $('form').serialize(),
             success: function() {
-              console.log("Data was added successfully");
-              location.reload();
+              console.log("Data has been added successfully");
+              LineGraph.update();
             },
             error: function() {
               console.log("Could not add the data");
