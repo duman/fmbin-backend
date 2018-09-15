@@ -115,6 +115,7 @@
       function submit() {
         var player_id = getParameterByName('player_id');
         var input = document.getElementById("input-data").value;
+        console.log(input);
         $("form").submit(function(e) {
           e.preventDefault();
           if (input !== '') {
