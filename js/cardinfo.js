@@ -24,9 +24,9 @@ $(document).ready(function(){
         cname.push(data[i].cname);
         pos.push(data[i].pos);
         ovr.push(data[i].ovr);
-        max_value.push(data[i].'MAX(price_value)')
-        avg_value.push(data[i].'AVG(price_value)')
-        min_value.push(data[i].'MIN(price_value)')
+        max_value.push(data[i].max_value);
+        avg_value.push(data[i].avg_value);
+        min_value.push(data[i].min_value);
       }
 
       $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 5em; text-align: center;"><b>' + cname[0] + '</b><br><b>Position:</b> ' + pos[0] + ' - <b>Overall:</b> ' + ovr[0] + '<br><br><b>Highest Price:</b> ' + max_value[0] + '<br><b>Average Price:</b>' + avg_value[0] + '<br><b>Lowest Price:</b> ' + min_value[0] + '</p></div>');
