@@ -148,12 +148,14 @@
                   removeData(LineGraph);
                   LineGraph.destroy();
                   delete LineGraph;
+                  $("#mycanvas").load(location.href+" #mycanvas>*","");
                   ctx = $("#mycanvas");
 
                   LineGraph = new Chart(ctx, {
                     type: 'line',
                     data: chartdata
                   });
+                  $("#mycanvas").load(location.href+" #mycanvas>*","");
                 },
                 error : function(data) {
                 }
