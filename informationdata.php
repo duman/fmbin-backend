@@ -18,7 +18,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$sql = "SELECT cname, pos, ovr FROM information";
+$sql = "SELECT cname, pos, ovr, MAX(price_value), AVG(price_value), MIN(price_value) FROM information, player";
 if(!empty($player_id)) {
 	$sql .= " WHERE player_id = " . $player_id;
 }

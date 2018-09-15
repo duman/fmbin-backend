@@ -24,7 +24,7 @@ $(document).ready(function(){
         ovr.push(data[i].ovr);
       }
 
-      $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 5em; text-align: center;">' + cname[0] + '</b><br><b>Position:</b> ' + pos[0] + ' - <b>Overall:</b> ' + ovr[0] + '</p></div>');
+      $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 5em; text-align: center;"><b>' + cname[0] + '</b><br><b>Position:</b> ' + pos[0] + ' - <b>Overall:</b> ' + ovr[0] + '</p></div>');
     },
     error : function(data) {
     }
