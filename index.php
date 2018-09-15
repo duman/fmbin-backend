@@ -44,13 +44,13 @@
           echo "0 results";
       }
 
-      $sql = "SELECT MAX(price_value), MIN(price_value) FROM players WHERE player_id =" . $player_id;
+      $sql = "SELECT MAX(price_value), AVG(price_value), MIN(price_value) FROM players WHERE player_id =" . $player_id;
       $result = $conn->query($sql);
 
       if ($result->num_rows > 0) {
           // output data of each row
           while($row = $result->fetch_assoc()) {
-              echo "<br><b>Highest Price:</b> " . number_format($row["MAX(price_value)"]) . "<br><b>Lowest Price:</b> " . number_format($row["MIN(price_value)"]) . "<br>";
+              echo "<br><b>Highest Price:</b> " . number_format($row["MAX(price_value)"]) . "<br><b>Average Price:</b> " . number_format($row["AVG(price_value)"]) . "<br><b>Lowest Price:</b> " . number_format($row["MIN(price_value)"]) . "<br>";
           }
       } else {
           echo "Could not retrieve price data.";
