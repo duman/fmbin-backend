@@ -99,22 +99,6 @@
           return decodeURIComponent(results[2].replace(/\+/g, ' '));
       }
 
-      function removeData(chart) {
-          chart.data.labels.pop();
-          chart.data.datasets.forEach((dataset) => {
-              dataset.data.pop();
-          });
-          chart.update();
-      }
-
-      function addData(chart, label, data) {
-          chart.data.labels.push(label);
-          chart.data.datasets.forEach((dataset) => {
-              dataset.data.push(data);
-          });
-          chart.update();
-      }
-
       function submit() {
         var player_id = getParameterByName('player_id');
         $("form").submit(function(e) {
@@ -156,8 +140,13 @@
                 error : function(data) {
                 }
               });
-              removeData(LineGraph);
-              addData(LineGraph, "Price", chartdata);
+              LineGraph.destroy();
+              ctx = $("#mycanvas");
+
+              LineGraph = new Chart(ctx, {
+                type: 'line',
+                data: chartdata
+              });
             },
             error: function() {
               console.log("Could not add the data");
