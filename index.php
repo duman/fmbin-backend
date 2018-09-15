@@ -86,6 +86,7 @@
       <script src="vendor/bootstrap/js/popper.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
       <script src="vendor/select2/select2.min.js"></script>
+      <script type="text/javascript" src="js/linegraph.js"></script>
       <script src="js/main.js"></script>
       <script>
       function getParameterByName(name, url) {
