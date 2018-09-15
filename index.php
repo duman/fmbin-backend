@@ -99,6 +99,12 @@
           return decodeURIComponent(results[2].replace(/\+/g, ' '));
       }
 
+      function reload(){
+          var container = document.getElementById("mycanvas");
+          var content = container.innerHTML;
+          container.innerHTML= content; 
+      }
+
       function submit() {
         var player_id = getParameterByName('player_id');
         $("form").submit(function(e) {
@@ -110,6 +116,7 @@
             success: function() {
               console.log("Data has been added successfully");
               DumanCHART.LineGraph.update();
+              reload();
             },
             error: function() {
               console.log("Could not add the data");
