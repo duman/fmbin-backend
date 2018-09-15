@@ -136,16 +136,17 @@
                       }
                     ]
                   };
+
+                  LineGraph.destroy();
+                  ctx = $("#mycanvas");
+
+                  LineGraph = new Chart(ctx, {
+                    type: 'line',
+                    data: chartdata
+                  });
                 },
                 error : function(data) {
                 }
-              });
-              LineGraph.destroy();
-              ctx = $("#mycanvas");
-
-              LineGraph = new Chart(ctx, {
-                type: 'line',
-                data: chartdata
               });
             },
             error: function() {
