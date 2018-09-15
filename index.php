@@ -99,10 +99,6 @@
           return decodeURIComponent(results[2].replace(/\+/g, ' '));
       }
 
-      function updateChartDiv() { 
-          $("#chart-container").load(window.location.href + "#chart-container");
-      }
-
       function submit() {
         var player_id = getParameterByName('player_id');
         $("form").submit(function(e) {
@@ -113,7 +109,8 @@
             data: $('form').serialize(),
             success: function() {
               console.log("Data has been added successfully");
-              updateChartDiv();
+              LineGraph.destroy();
+              LineGraph.update();
             },
             error: function() {
               console.log("Could not add the data");
