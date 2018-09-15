@@ -99,6 +99,14 @@
           return decodeURIComponent(results[2].replace(/\+/g, ' '));
       }
 
+      function removeData(chart) {
+          chart.data.labels.pop();
+          chart.data.datasets.forEach((dataset) => {
+              dataset.data.pop();
+          });
+          chart.update();
+      }
+
       function submit() {
         var player_id = getParameterByName('player_id');
         $("form").submit(function(e) {
@@ -137,6 +145,7 @@
                     ]
                   };
 
+                  removeData(LineGraph);
                   LineGraph.destroy();
                   delete LineGraph;
                   ctx = $("#mycanvas");
