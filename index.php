@@ -109,7 +109,7 @@
             data: $('form').serialize(),
             success: function() {
               console.log("Data has been added successfully");
-              LineGraph.update();
+              removeData(LineGraph);
             },
             error: function() {
               console.log("Could not add the data");
