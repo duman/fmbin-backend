@@ -8,6 +8,11 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+var LineGraph = new Chart(ctx, {
+  type: 'line',
+  data: chartdata
+});
+
 $(document).ready(function(){
   var player_id = getParameterByName('player_id');
   $.ajax({
@@ -41,11 +46,6 @@ $(document).ready(function(){
       };
 
       var ctx = $("#mycanvas");
-
-      var LineGraph = new Chart(ctx, {
-        type: 'line',
-        data: chartdata
-      });
     },
     error : function(data) {
 
