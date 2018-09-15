@@ -44,6 +44,7 @@ $(document).ready(function(){
       for(var i in data) {
         last_report.push(data[i].last_report);
         price_value.push(data[i].price_value);
+        LineGraph.update();
       }
     },
     error : function(data) {
