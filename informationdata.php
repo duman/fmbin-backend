@@ -20,7 +20,7 @@ if(!$mysqli){
 //query to get data from the table
 $sql = "SELECT cname, pos, ovr, MAX(price_value), AVG(price_value), MIN(price_value) FROM information, players";
 if(!empty($player_id)) {
-	$sql .= " WHERE player_id = " . $player_id;
+	$sql .= " WHERE players.player_id = " . $player_id;
 }
 $query = sprintf($sql);
 // add WHERE = player_id = "434" to make it runnable with any distinct player
