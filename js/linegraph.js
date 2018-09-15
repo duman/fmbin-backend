@@ -8,23 +8,23 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-var DumanCHART = {};
+window.intro = undefined;
 $(document).ready(function(){
   var player_id = getParameterByName('player_id');
   $.ajax({
     url : "../data.php?player_id=" + player_id,
     type : "GET",
     success : function(data){
-      DumanCHART.last_report = [];
-      DumanCHART.price_value = [];
+      last_report = [];
+      price_value = [];
 
       for(var i in data) {
-        DumanCHART.last_report.push(data[i].last_report);
-        DumanCHART.price_value.push(data[i].price_value);
+        last_report.push(data[i].last_report);
+        price_value.push(data[i].price_value);
       }
 
-      DumanCHART.chartdata = {
-        labels: DumanCHART.last_report,
+      chartdata = {
+        labels: last_report,
         datasets: [
           {
             label: "Price",
@@ -34,16 +34,16 @@ $(document).ready(function(){
             borderColor: "rgba(59, 89, 152, 1)",
             pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
             pointHoverBorderColor: "rgba(59, 89, 152, 1)",
-            data: DumanCHART.price_value
+            data: price_value
           }
         ]
       };
 
-      DumanCHART.ctx = $("#mycanvas");
+      ctx = $("#mycanvas");
 
-      DumanCHART.LineGraph = new Chart(DumanCHART.ctx, {
+      LineGraph = new Chart(ctx, {
         type: 'line',
-        data: DumanCHART.chartdata
+        data: chartdata
       });
     },
     error : function(data) {
