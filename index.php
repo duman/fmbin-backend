@@ -138,6 +138,7 @@
                   };
 
                   LineGraph.destroy();
+                  delete LineGraph;
                   ctx = $("#mycanvas");
 
                   LineGraph = new Chart(ctx, {
