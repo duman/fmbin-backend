@@ -66,7 +66,7 @@
       <div class="p-t-50 p-b-60">
         <form class="contact100-form validate-form" id="post_price">
           <div class="wrap-input100 m-b-10 validate-input" data-validate = "Price is required">
-            <input class="s2-txt1 placeholder0 input100" type="text" name="price" placeholder="Price" autocomplete="off">
+            <input class="s2-txt1 placeholder0 input100" id="input-data" type="text" name="price" placeholder="Price" autocomplete="off">
             <span class="focus-input100"></span>
           </div>
 
@@ -155,6 +155,7 @@
                   delete LineGraph;
                   removeElement('mycanvas');
                   $('#chart-container').append('<canvas id="mycanvas"></canvas>');
+                  document.getElementById('input-data').value = '';
                   ctx = $("#mycanvas");
 
                   LineGraph = new Chart(ctx, {
