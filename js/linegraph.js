@@ -8,6 +8,8 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+var ctx = $("#mycanvas");
+
 var LineGraph = new Chart(ctx, {
   type: 'line',
   data: chartdata
@@ -44,8 +46,6 @@ $(document).ready(function(){
           }
         ]
       };
-
-      var ctx = $("#mycanvas");
     },
     error : function(data) {
 
