@@ -14,9 +14,9 @@ $(document).ready(function(){
     url : "../informationdata.php?player_id=" + player_id,
     type : "GET",
     success : function(data){
-      cname = [];
-      pos = [];
-      ovr = [];
+      var cname = [];
+      var pos = [];
+      var ovr = [];
 
       for(var i in data) {
         cname.push(data[i].cname);
