@@ -82,11 +82,11 @@
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script type="text/javascript" src="js/linegraph.js"></script>
+      <script type="text/javascript" src="js/cardinfo.js"></script>
       <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
       <script src="vendor/bootstrap/js/popper.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
       <script src="vendor/select2/select2.min.js"></script>
-      <script type="text/javascript" src="js/linegraph.js"></script>
       <script src="js/main.js"></script>
       <script>
       function getParameterByName(name, url) {
@@ -113,6 +113,7 @@
       }
 
       function submit() {
+        $('#chart-container').before('<div id="card-info">' + name[0] + '</div>');
         var player_id = getParameterByName('player_id');
         $("form").submit(function(e) {
           e.preventDefault();
