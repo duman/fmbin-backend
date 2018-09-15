@@ -70,7 +70,6 @@
       }
 
       function submit() {
-        $('#chart-container').before('<div id="card-info">' + cname[0] + '</div>');
         var player_id = getParameterByName('player_id');
         $("form").submit(function(e) {
           e.preventDefault();
