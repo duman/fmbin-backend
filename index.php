@@ -117,7 +117,7 @@
         var input = document.getElementById("input-data").value;
         $("form").submit(function(e) {
           e.preventDefault();
-          if (input) {
+          if (input !== '') {
             $.ajax({
               type: 'POST',
               url: 'adddata.php?player_id=' + player_id,
