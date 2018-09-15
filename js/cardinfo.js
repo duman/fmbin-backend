@@ -14,12 +14,12 @@ $(document).ready(function(){
     url : "../informationdata.php?player_id=" + player_id,
     type : "GET",
     success : function(data){
-      name = [];
+      cname = [];
       pos = [];
       ovr = [];
 
       for(var i in data) {
-        name.push(data[i].name);
+        cname.push(data[i].name);
         pos.push(data[i].pos);
         ovr.push(data[i].ovr);
       }
