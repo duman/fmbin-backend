@@ -117,7 +117,6 @@
         $("form").submit(function(e) {
           e.preventDefault();
           var input = document.getElementById('input-data').value;
-          console.log('Value of input:"' + input + '"');
           if (input !== '') {
             $.ajax({
               type: 'POST',
