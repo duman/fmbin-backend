@@ -8,6 +8,9 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+var last_report = [];
+var price_value = [];
+
 var chartdata = {
   labels: last_report,
   datasets: [
@@ -38,10 +41,6 @@ $(document).ready(function(){
     type : "GET",
     success : function(data){
       console.log(data);
-
-      var last_report = [];
-      var price_value = [];
-
       for(var i in data) {
         last_report.push(data[i].last_report);
         price_value.push(data[i].price_value);
