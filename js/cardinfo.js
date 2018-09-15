@@ -8,21 +8,23 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
-var cname = [];
-var pos = [];
-var ovr = [];
-
 $(document).ready(function(){
   var player_id = getParameterByName('player_id');
   $.ajax({
     url : "../informationdata.php?player_id=" + player_id,
     type : "GET",
     success : function(data){
+      cname = [];
+      pos = [];
+      ovr = [];
+
       for(var i in data) {
         cname.push(data[i].cname);
         pos.push(data[i].pos);
         ovr.push(data[i].ovr);
       }
+
+      $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 5em; text-align: center;">' + cname[0] + '</b><br><b>Position:</b> ' + pos[0] + ' - <b>Overall:</b> ' + ovr[0] + '</p></div>');
     },
     error : function(data) {
     }
