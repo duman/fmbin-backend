@@ -116,8 +116,8 @@
         var player_id = getParameterByName('player_id');
         var input = document.getElementById("input-data").value;
         $("form").submit(function(e) {
-          if (input) {
-            e.preventDefault();
+          e.preventDefault();
+          if (input !== null) {
             $.ajax({
               type: 'POST',
               url: 'adddata.php?player_id=' + player_id,
