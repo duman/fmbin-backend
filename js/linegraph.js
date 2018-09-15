@@ -8,6 +8,22 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+var chartdata = {
+  labels: last_report,
+  datasets: [
+    {
+      label: "Price",
+      fill: false,
+      lineTension: 0.1,
+      backgroundColor: "rgba(59, 89, 152, 0.75)",
+      borderColor: "rgba(59, 89, 152, 1)",
+      pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
+      pointHoverBorderColor: "rgba(59, 89, 152, 1)",
+      data: price_value
+    }
+  ]
+};
+
 var ctx = $("#mycanvas");
 
 var LineGraph = new Chart(ctx, {
@@ -30,22 +46,6 @@ $(document).ready(function(){
         last_report.push(data[i].last_report);
         price_value.push(data[i].price_value);
       }
-
-      var chartdata = {
-        labels: last_report,
-        datasets: [
-          {
-            label: "Price",
-            fill: false,
-            lineTension: 0.1,
-            backgroundColor: "rgba(59, 89, 152, 0.75)",
-            borderColor: "rgba(59, 89, 152, 1)",
-            pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
-            pointHoverBorderColor: "rgba(59, 89, 152, 1)",
-            data: price_value
-          }
-        ]
-      };
     },
     error : function(data) {
 
