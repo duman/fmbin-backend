@@ -8,19 +8,18 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+var cname = [];
+var pos = [];
+var ovr = [];
+var max_value = [];
+var avg_value = [];
+var min_value = [];
 $(document).ready(function(){
   var player_id = getParameterByName('player_id');
   $.ajax({
     url : "../informationdata.php?player_id=" + player_id,
     type : "GET",
     success : function(data){
-      var cname = [];
-      var pos = [];
-      var ovr = [];
-      var max_value = [];
-      var avg_value = [];
-      var min_value = [];
-
       for(var i in data) {
         cname.push(data[i].cname);
         pos.push(data[i].pos);
