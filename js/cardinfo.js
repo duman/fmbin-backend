@@ -19,7 +19,7 @@ $(document).ready(function(){
       ovr = [];
 
       for(var i in data) {
-        cname.push(data[i].name);
+        cname.push(data[i].cname);
         pos.push(data[i].pos);
         ovr.push(data[i].ovr);
       }

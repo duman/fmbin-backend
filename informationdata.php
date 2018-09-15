@@ -18,7 +18,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$sql = "SELECT name, pos, ovr FROM information";
+$sql = "SELECT cname, pos, ovr FROM information";
 if(!empty($player_id)) {
 	$sql .= " WHERE player_id = " . $player_id;
 }
