@@ -8,16 +8,16 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
+var cname = [];
+var pos = [];
+var ovr = [];
+
 $(document).ready(function(){
   var player_id = getParameterByName('player_id');
   $.ajax({
     url : "../informationdata.php?player_id=" + player_id,
     type : "GET",
     success : function(data){
-      var cname = [];
-      var pos = [];
-      var ovr = [];
-
       for(var i in data) {
         cname.push(data[i].cname);
         pos.push(data[i].pos);
