@@ -109,7 +109,6 @@
             data: $('form').serialize(),
             success: function() {
               console.log("Data has been added successfully");
-              LineGraph.destroy();
               LineGraph.update();
             },
             error: function() {
