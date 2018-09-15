@@ -18,7 +18,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$sql = "SELECT player_id, price_value, last_report FROM players";
+$sql = "SELECT price_value, last_report FROM players";
 if(!empty($player_id)) {
 	$sql .= " WHERE player_id = " . $player_id;
 }
