@@ -43,12 +43,12 @@ function doWork() {
               price_value = [];
 
               for(var i in data) {
-                last_report.push(data[i].last_report);
+                last_report.push(" ");
                 price_value.push(data[i].price_value);
               }
 
               chartdata = {
-                //labels: last_report,
+                labels: last_report,
                 datasets: [
                   {
                     label: "Price",
