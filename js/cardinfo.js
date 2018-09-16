@@ -107,6 +107,9 @@ function doWork() {
             }
           });
         }
+        else {
+          maxid = [];
+        }
       },
       error : function(data) {
       }
