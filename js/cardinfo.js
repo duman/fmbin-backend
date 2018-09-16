@@ -36,6 +36,7 @@ function doWork() {
         if (maxid[0] > firstmaxid) {
             firstmaxid = maxid[0];
             maxid = [];
+            var player_id = getParameterByName('player_id');
             $.ajax({
             url : "../data.php?player_id=" + player_id,
             type : "GET",
