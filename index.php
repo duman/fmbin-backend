@@ -45,6 +45,7 @@
       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
       <script src="vendor/select2/select2.min.js"></script>
       <script src="js/main.js"></script>
+      <script>doWork();</script>
       <script>
       function getParameterByName(name, url) {
           if (!url) url = window.location.href;
@@ -70,6 +71,19 @@
       }
 
       function submit() {
+        $.ajax({
+          url : "../maxid.php",
+          type : "GET",
+          success : function(data){
+            for(var i in data) {
+              maxid.push(data[i].max_id);
+            }
+            firstmaxid = maxid[0];
+            maxid = [];
+          },
+          error : function(data) {
+          }
+        });
         var player_id = getParameterByName('player_id');
         $("form").submit(function(e) {
           e.preventDefault();
