@@ -23,6 +23,7 @@ $query = sprintf($sql);
 // SELECT cname, pos, ovr, MAX(price_value) as max_value, AVG(price_value) as avg_value, MIN(price_value) as min_value FROM information, players WHERE players.player_id = 2 AND information.player_id = 2;
 // add WHERE = player_id = "434" to make it runnable with any distinct player
 // add WHERE = time_interval_from_user so that only data between certain date/time will be displayed
+// SELECT * FROM players WHERE last_report > NOW() - INTERVAL 1 DAY // Returns records within 24 hours
 
 //execute query
 $result = $mysqli->query($query);
