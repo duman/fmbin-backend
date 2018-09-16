@@ -177,6 +177,7 @@
 
       $(document).ready(function() {
         submit();
+        doWork();
       });
     </script>
     <script type="text/javascript">
@@ -192,6 +193,5 @@
         });
       });
     </script>
-    <script>doWork();</script>
   </body>
 </html>
