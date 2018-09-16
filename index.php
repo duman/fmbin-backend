@@ -78,7 +78,6 @@
               maxid.push(data[i].max_id);
             }
             firstmaxid = maxid[0];
-            console.log('Page load max id: ' + firstmaxid);
             maxid = [];
           },
           error : function(data) {
