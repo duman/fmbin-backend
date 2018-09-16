@@ -43,7 +43,7 @@ function doWork() {
               price_value = [];
 
               for(var i in data) {
-                last_report.push(" ");
+                last_report.push(data[i].last_report);
                 price_value.push(data[i].price_value);
               }
 
@@ -99,7 +99,16 @@ function doWork() {
 
               LineGraph = new Chart(ctx, {
                 type: 'line',
-                data: chartdata
+                data: chartdata,
+                options: {
+                  scales: {
+                    xAxes: [{
+                      ticks: {
+                        display: false //this will remove only the label
+                      }
+                    }]
+                  }
+                }
               });
             },
             error : function(data) {
