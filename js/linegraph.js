@@ -23,7 +23,7 @@ $(document).ready(function(){
       }
 
       chartdata = {
-        labels: last_report,
+        //labels: last_report,
         datasets: [
           {
             label: "Price",
