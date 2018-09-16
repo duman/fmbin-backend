@@ -24,6 +24,7 @@ function removeElement(id) {
 var maxid = [];
 var firstmaxid;
 function doWork() {
+  console.log('doWork(); executed.');
     $.ajax({
       url : "../maxid.php",
       type : "GET",
@@ -31,6 +32,7 @@ function doWork() {
         for(var i in data) {
           maxid.push(data[i].max_id);
         }
+        console.log('Current maxid: ' + maxid[0] + ' and firstmaxid: ' + firstmaxid);
         if (maxid[0] > firstmaxid) {
             firstmaxid = maxid[0];
             maxid = [];

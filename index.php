@@ -45,7 +45,6 @@
       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
       <script src="vendor/select2/select2.min.js"></script>
       <script src="js/main.js"></script>
-      <script>doWork();</script>
       <script>
       function getParameterByName(name, url) {
           if (!url) url = window.location.href;
@@ -79,6 +78,7 @@
               maxid.push(data[i].max_id);
             }
             firstmaxid = maxid[0];
+            console.log('Page load max id: ' + firstmaxid);
             maxid = [];
           },
           error : function(data) {
@@ -192,5 +192,6 @@
         });
       });
     </script>
+    <script>doWork();</script>
   </body>
 </html>
