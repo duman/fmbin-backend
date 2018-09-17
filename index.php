@@ -37,7 +37,7 @@
           </div>
         </form>
         <form action="index.php" method="post" name="time-submit" onsubmit="setData()">
-          <select id="time-values" name="time" class="wrap-input100 m-b-10" style="margin-left: 10%;">
+          <select id="time-values" name="time" class="wrap-input100 m-b-10 input100" style="margin-left: 10%;">
             <option name="time" value="1">Hourly</option>
             <option name="time" value="6">6 Hours</option>
             <option name="time" value="12">12 Hours</option>
@@ -52,7 +52,6 @@
           </button>
         </form>
       </div>
-    </div> <!-- This does actually closes a dynamically generated <div class="all-elements-under" id="all-elements-under"> -->
       <!-- javascript -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script type="text/javascript" src="js/linegraph.js"></script>
