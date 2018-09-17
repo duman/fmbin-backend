@@ -18,7 +18,6 @@
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
-    <div class="all-elements-under" id="all-elements-under">
       <div class="chart-container" id="chart-container">
         <canvas id="mycanvas"></canvas>
       </div>
@@ -53,7 +52,7 @@
           </button>
         </form>
       </div>
-    </div>
+    </div> <!-- This does actually closes a dynamically generated <div class="all-elements-under" id="all-elements-under"> -->
       <!-- javascript -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script type="text/javascript" src="js/linegraph.js"></script>
@@ -175,7 +174,7 @@
                           min_value.push(data[i].min_value);
                         }
 
-                        $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 1em; text-align: center;"><b>' + cname[0] + '</b><br><b>Position:</b> ' + pos[0] + ' - <b>Overall:</b> ' + ovr[0] + '<br><br><b>Highest Price:</b> ' + number_format(max_value[0], 0) + '<br><b>Average Price:</b> ' + number_format(avg_value[0], 0) + '<br><b>Lowest Price:</b> ' + number_format(min_value[0], 0) + '</p></div>');
+                        $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 1em; text-align: center;"><b>' + cname[0] + '</b><br><b>Position:</b> ' + pos[0] + ' - <b>Overall:</b> ' + ovr[0] + '<br><br><b>Highest Price:</b> ' + number_format(max_value[0], 0) + '<br><b>Average Price:</b> ' + number_format(avg_value[0], 0) + '<br><b>Lowest Price:</b> ' + number_format(min_value[0], 0) + '</p></div><div class="all-elements-under" id="all-elements-under">');
                       },
                       error : function(data) {
                       }
