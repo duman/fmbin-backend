@@ -30,6 +30,10 @@ Primary use:
     border-top: 0px solid #ccc !important;
     border-radius: 0px !important;
   }
+  .legend-con {
+    position: absolute;
+    left: 12%;
+  }
 }
 
 /*//////////////////////////////////////////////////////////////////
