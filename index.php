@@ -18,7 +18,7 @@
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
-      <form action="https://beta.fmbin.com/" method="POST" style="margin-top: 2%;">
+      <form method="POST" style="margin-top: 2%;">
         <select name="time" style="margin-right: 1%; width: 15%;">
           <option value="1">Hourly</option>
           <option value="6">6 Hours</option>
