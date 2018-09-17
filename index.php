@@ -22,7 +22,7 @@ if (session_id() == '') {
     <title>BETA</title>
     <style>
       .chart-container {
-        width: 640px;
+        width: auto;
         height: auto;
       }
     </style>
@@ -44,7 +44,7 @@ if (session_id() == '') {
       </div>
 
       <div class="chart-container" id="chart-container">
-        <canvas id="mycanvas"></canvas>
+        <center><canvas id="mycanvas"></canvas></center>
       </div>
       <div id="my-legend-con" class="legend-con"></div>
       
@@ -232,7 +232,7 @@ if (session_id() == '') {
                         $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 1em; text-align: center;"><b>' + cname[0] + '</b><br><b>Position:</b> ' + pos[0] + ' - <b>Overall:</b> ' + ovr[0] + '<br><br><b>Highest Price:</b> ' + number_format(max_value[0], 0) + '<br><b>Average Price:</b> ' + number_format(avg_value[0], 0) + '<br><b>Lowest Price:</b> ' + number_format(min_value[0], 0) + '</p></div>');
                       }
                       else {
-                        $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 1em; text-align: center;"><b>Whoops!</b><br>There\'s no data since last ' + time + ' hours on this card. You can add a new price or you can try to increase the time interval for your search.</p></div>');
+                        $('#chart-container').before('<div id="card-info"><p class="m1-txt1 p-b-36" style="padding-top: 1em; text-align: center;"><b>Whoops!</b><br>There\'s <b>no data since last ' + time + ' hours</b> on this card. You can add a new price or you can try to increase the time interval for your search.</p></div>');
                       }
                       },
                       error : function(data) {
