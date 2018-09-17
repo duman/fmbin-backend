@@ -12,6 +12,10 @@ Primary use:
   body, html{
     width: 100%;
   }
+  .chart-container {
+    width: auto;
+    height: auto;
+  }
 }
 
 /*//////////////////////////////////////////////////////////////////
