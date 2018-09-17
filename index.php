@@ -18,6 +18,19 @@
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
+      <form class="input100">
+        <select name="time">
+          <option value="1">Hourly</option>
+          <option value="6">6 Hours</option>
+          <option value="12">12 Hours</option>
+          <option value="24">1 Day</option>
+          <option value="72">3 Day</option>
+          <option value="168">1 Week</option>
+          <option value="672">1 Month</option>
+          <option value="2016">3 Months</option>
+        </select>
+        <input type="submit">
+      </form>
       <div class="chart-container" id="chart-container">
         <canvas id="mycanvas"></canvas>
       </div>
