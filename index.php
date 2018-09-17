@@ -29,6 +29,7 @@
           <option name="time" value="672">1 Month</option>
           <option name="time" value="2016">3 Months</option>
         </select>
+        <input type="hidden" name="player_id" value="<?php $_GET['player_id']; ?>"/> 
         <button type="submit" value="Submit" class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit-time" name="submit" style="width: 15%;">
           Select
         </button>
