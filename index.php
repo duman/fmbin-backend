@@ -22,7 +22,7 @@ if (session_id() == '') {
     <title>BETA</title>
     <style>
       .chart-container {
-        width: 100%;
+        width: 640px;
         height: auto;
       }
     </style>
