@@ -102,6 +102,7 @@ Primary use:
 }
 
 select:focus {outline-color: #57b846;}
+input:focus {outline-color: #57b846;}
 
 /*//////////////////////////////////////////////////////////////////
 [ SEARCH BOX ]*/
