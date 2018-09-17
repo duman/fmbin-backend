@@ -55,7 +55,8 @@ function doWork() {
                   {
                     label: "Price",
                     fill: false,
-                    pointRadius: 20,
+                    pointRadius: 6,
+                    pointHoverRadius: 6,
                     lineTension: 0.1,
                     backgroundColor: "rgba(59, 89, 152, 0.75)",
                     borderColor: "rgba(59, 89, 152, 1)",
