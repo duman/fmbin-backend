@@ -25,6 +25,9 @@ Primary use:
   }
   .ls_query {
     border-bottom: 1px solid #ccc !important;
+    border-left: 0px solid #ccc !important;
+    border-right: 0px solid #ccc !important;
+    border-top: 0px solid #ccc !important;
     border-radius: 0px !important;
   }
 }
