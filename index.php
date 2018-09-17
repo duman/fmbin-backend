@@ -18,7 +18,7 @@
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
-      <form method="POST" style="margin-top: 2%;">
+      <form action="index.php" method="post" style="margin-top: 2%;">
         <select name="time" style="margin-right: 1%; width: 15%;">
           <option value="1">Hourly</option>
           <option value="6">6 Hours</option>
@@ -29,9 +29,9 @@
           <option value="672">1 Month</option>
           <option value="2016">3 Months</option>
         </select>
-        <button class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit-time" name="submit" type="submit" style="width: 15%;">
+        <input type="submit" class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit-time" name="submit" style="width: 15%;">
           Select
-        </button>
+        </input>
       </form>
       <div class="chart-container" id="chart-container">
         <canvas id="mycanvas"></canvas>
