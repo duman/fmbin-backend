@@ -60,7 +60,7 @@ $(document).ready(function(){
               legendHtml.push('<ul>');
               legendHtml.push('<li>');
               legendHtml.push('<span class="chart-legend" style="background-color: #3b5998"></span>');
-              legendHtml.push('<span class="chart-legend-label-text"><p class="m1-txt1 p-b-36" style="padding-top: 5em; text-align: center;">Data is shown for the last ' + time + ' hours</p></span>');
+              legendHtml.push('<span class="chart-legend-label-text"><p class="m1-txt1" style="font-size: 16px; text-align: center;">Data is shown for the last ' + time + ' hours</p></span>');
               legendHtml.push('</li>');
               legendHtml.push('</ul>');
               return legendHtml.join("");
