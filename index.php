@@ -62,13 +62,6 @@
       <script src="vendor/select2/select2.min.js"></script>
       <script src="js/main.js"></script>
       <script>
-      function setData(){
-          var select = document.getElementById('time-values');
-          var time_id = select.options[select.selectedIndex].value;
-          var parameters = "?player_id=" + getParameterByName('player_id'); + "&time="+ time_id;
-          window.open("https://beta.fmbin.com/" + parameters,"_self"); // TODO: change this link when out of beta
-      }
-
       function getParameterByName(name, url) {
           if (!url) url = window.location.href;
           name = name.replace(/[\[\]]/g, '\\$&');
@@ -77,6 +70,13 @@
           if (!results) return null;
           if (!results[2]) return '';
           return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
+
+      function setData(){
+          var select = document.getElementById('time-values');
+          var time_id = select.options[select.selectedIndex].value;
+          var parameters = "?player_id=" + getParameterByName('player_id') + "&time="+ time_id;
+          window.open("https://beta.fmbin.com/" + parameters,"_self"); // TODO: change this link when out of beta
       }
 
       function removeData(chart) {
