@@ -52,9 +52,22 @@ $(document).ready(function(){
                 display: false //this will remove only the label
               }
             }]
+          },
+          responsive: true,
+          legend: false,
+          legendCallback: function(chart) {
+              var legendHtml = [];
+              legendHtml.push('<ul>');
+              legendHtml.push('<li>');
+              legendHtml.push('<span class="chart-legend" style="background-color: #57b846"></span>');
+              legendHtml.push('<span class="chart-legend-label-text">Data is shown for the last ' + time + ' hours</span>');
+              legendHtml.push('</li>');
+              legendHtml.push('</ul>');
+              return legendHtml.join("");
           }
         }
       });
+      $('#my-legend-con').html(myChart.generateLegend());
     },
     error : function(data) {
     }
