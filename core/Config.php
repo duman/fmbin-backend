@@ -26,14 +26,14 @@ class Config
                 // specify the name of search columns
                 'searchColumns'      => ['cname'],
                 // specify order by column. This is optional
-                'orderBy'            => '',
+                'orderBy'            => 'ovr',
                 // specify order direction e.g. ASC or DESC. This is optional
-                'orderDirection'     => '',
+                'orderDirection'     => 'DESC',
                 /**
                  * filter the result by entering table column names
                  * to get all the columns, remove filterResult or make it an empty array
                  */
-                'filterResult'       => [],
+                'filterResult'       => ['player_id', 'cname', 'pos', 'ovr'],
                 /**
                  * specify search query comparison operator.
                  * possible values for comparison operators are: 'LIKE' and '='. this is required
