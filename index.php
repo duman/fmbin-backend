@@ -84,6 +84,8 @@
           }
         });
         var player_id = getParameterByName('player_id');
+        var time = getParameterByName('time');
+        if (time === null) { time = 6; }
         $("form").submit(function(e) {
           e.preventDefault();
           var input = document.getElementById('input-data').value;
@@ -94,6 +96,7 @@
               data: $('form').serialize(),
               success: function() {
                 console.log("Data has been added successfully");
+                firstmaxid = firstmaxid + 1;
                 $.ajax({
                   url : "../data.php?player_id=" + player_id,
                   type : "GET",

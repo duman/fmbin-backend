@@ -12,6 +12,7 @@ define('DB_NAME', 'admin_fmbin');
 $mysqli = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 $player_id = mysqli_real_escape_string($mysqli, $_REQUEST['player_id']);
+$time = mysqli_real_escape_string($mysqli, $_REQUEST['time']); // this is in days, for example 1 means a day, 7 means a week etc.
 
 if(!$mysqli){
   die("Connection failed: " . $mysqli->error);
@@ -21,6 +22,9 @@ if(!$mysqli){
 $sql = "SELECT price_value, last_report FROM players";
 if(!empty($player_id)) {
 	$sql .= " WHERE player_id = " . $player_id;
+}
+if(!empty($time)) {
+	$sql .= " AND last_report > NOW() - INTERVAL " . $time . " HOUR";
 }
 $query = sprintf($sql);
 // add WHERE = player_id = "434" to make it runnable with any distinct player

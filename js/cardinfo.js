@@ -35,8 +35,10 @@ function doWork() {
             firstmaxid = maxid[0];
             maxid = [];
             var player_id = getParameterByName('player_id');
+            var time = getParameterByName('time');
+            if (time === null) { time = 6; }
             $.ajax({
-            url : "../data.php?player_id=" + player_id,
+            url : "../data.php?player_id=" + player_id + "&time=" + time,
             type : "GET",
             success : function(data){
               last_report = [];
@@ -77,7 +79,7 @@ function doWork() {
               var min_value = [];
 
               $.ajax({
-                url : "../informationdata.php?player_id=" + player_id,
+                url : "../informationdata.php?player_id=" + player_id + "&time=" + time,,
                 type : "GET",
                 success : function(data){
                   for(var i in data) {
@@ -154,8 +156,10 @@ var avg_value = [];
 var min_value = [];
 $(document).ready(function(){
   var player_id = getParameterByName('player_id');
+  var time = getParameterByName('time');
+  if (time === null) { time = 6; }
   $.ajax({
-    url : "../informationdata.php?player_id=" + player_id,
+    url : "../informationdata.php?player_id=" + player_id + "&time=" + time,,
     type : "GET",
     success : function(data){
       for(var i in data) {
