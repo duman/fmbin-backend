@@ -124,7 +124,7 @@ function doWork() {
                   }
                 }
               });
-              $('#my-legend-con').html(myChart.generateLegend());
+              $('#my-legend-con').html(LineGraph.generateLegend());
             },
             error : function(data) {
             }
