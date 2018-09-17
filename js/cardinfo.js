@@ -24,11 +24,11 @@ function removeElement(id) {
 var maxid = [];
 firstmaxid = 0;
 function doWork() {
-  console.log(firstmaxid);
     $.ajax({
       url : "../maxid.php",
       type : "GET",
       success : function(data){
+        console.log('firstmaxid: ' + firstmaxid + 'maxid[0]: ' + maxid[0]);
         for(var i in data) {
           maxid.push(data[i].max_id);
         }
