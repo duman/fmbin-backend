@@ -22,7 +22,7 @@ function removeElement(id) {
 }
 
 var maxid = [];
-var firstmaxid;
+firstmaxid = 0;
 function doWork() {
     $.ajax({
       url : "../maxid.php",

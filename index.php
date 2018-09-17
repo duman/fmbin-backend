@@ -97,7 +97,7 @@
               data: $('form').serialize(),
               success: function() {
                 console.log("Data has been added successfully");
-                firstmaxid = firstmaxid + 1;
+                firstmaxid += 1;
                 $.ajax({
                   url : "../data.php?player_id=" + player_id + "&time=" + time,
                   type : "GET",
