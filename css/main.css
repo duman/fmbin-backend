@@ -11,6 +11,8 @@ Primary use:
 @media only screen and (max-width: 40em) {
   body, html{
     width: 100%;
+    margin: 0;
+    padding: 0;
   }
   .chart-container {
     width: auto;
