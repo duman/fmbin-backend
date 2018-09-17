@@ -64,7 +64,7 @@ if (session_id() == '') {
           </div>
         </form>
         <form action="index.php" method="post" name="time-submit" onsubmit="setData()">
-          <select id="time-values" name="time" class="wrap-input100 m-b-10 input100" style="margin-left: 10%;">
+          <select id="time-values" name="time" class="wrap-input100 m-b-10 input100">
             <option name="time" value="1">Hourly</option>
             <option name="time" value="6">6 Hours</option>
             <option name="time" value="12">12 Hours</option>
@@ -74,7 +74,7 @@ if (session_id() == '') {
             <option name="time" value="672">1 Month</option>
             <option name="time" value="2016">3 Months</option>
           </select>
-          <button type="submit" value="Submit" class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit-time" name="submit" style="margin-left: 10%;">
+          <button type="submit" value="Submit" class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit-time" name="submit">
             Select
           </button>
         </form>
