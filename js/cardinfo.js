@@ -116,7 +116,7 @@ function doWork() {
                       var legendHtml = [];
                       legendHtml.push('<ul>');
                       legendHtml.push('<li>');
-                      legendHtml.push('<span class="chart-legend" style="background-color: #57b846"></span>');
+                      legendHtml.push('<span class="chart-legend" style="background-color: #3b5998"></span>');
                       legendHtml.push('<span class="chart-legend-label-text">Data is shown for the last ' + time + ' hours</span>');
                       legendHtml.push('</li>');
                       legendHtml.push('</ul>');
