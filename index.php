@@ -36,6 +36,7 @@ if (session_id() == '') {
     <link rel="stylesheet" type="text/css" href="css/animation.css">
     <link rel="stylesheet" type="text/css" href="css/ajaxlivesearch.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/ajaxlivesearch.min.js"></script>
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
@@ -78,8 +79,6 @@ if (session_id() == '') {
         </form>
       </div>
       <!-- javascript -->
-      <script src="js/jquery-1.11.1.min.js"></script>
-      <script type="text/javascript" src="js/ajaxlivesearch.min.js"></script>
       <script>
       jQuery(document).ready(function(){
           jQuery(".mySearch").ajaxlivesearch({
