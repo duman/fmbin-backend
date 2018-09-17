@@ -1,6 +1,24 @@
+<?php
+
+$DS = DIRECTORY_SEPARATOR;
+file_exists(__DIR__ . $DS . 'core' . $DS . 'Handler.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Handler.php' : die('Handler.php not found');
+file_exists(__DIR__ . $DS . 'core' . $DS . 'Config.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Config.php' : die('Config.php not found');
+
+use AjaxLiveSearch\core\Config;
+use AjaxLiveSearch\core\Handler;
+
+if (session_id() == '') {
+    session_start();
+}
+
+    $handler = new Handler();
+    $handler->getJavascriptAntiBot();
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>BETA</title>
     <style>
       .chart-container {
@@ -14,10 +32,17 @@
     <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/fontello.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <link rel="stylesheet" type="text/css" href="css/ajaxlivesearch.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
+      <div style="clear: both">
+        <input type="text" class='mySearch' id="ls_query" placeholder="Type to start searching ...">
+      </div>
+
       <div class="chart-container" id="chart-container">
         <canvas id="mycanvas"></canvas>
       </div>
@@ -53,6 +78,33 @@
         </form>
       </div>
       <!-- javascript -->
+      <script type="text/javascript" src="js/ajaxlivesearch.min.js"></script>
+      <script>
+      jQuery(document).ready(function(){
+          jQuery(".mySearch").ajaxlivesearch({
+              loaded_at: <?php echo time(); ?>,
+              token: <?php echo "'" . $handler->getToken() . "'"; ?>,
+              max_input: <?php echo Config::getConfig('maxInputLength'); ?>,
+              onResultClick: function(e, data) {
+                  // get the index 0 (first column) value
+                  var selectedOne = jQuery(data.selected).find('td').eq('0').text();
+
+                  // set the input value
+                  jQuery('#ls_query').val(selectedOne);
+
+                  // hide the result
+                  jQuery("#ls_query").trigger('ajaxlivesearch:hide_result');
+              },
+              onResultEnter: function(e, data) {
+                  // do whatever you want
+                  // jQuery("#ls_query").trigger('ajaxlivesearch:search', {query: 'test'});
+              },
+              onAjaxComplete: function(e, data) {
+
+              }
+          });
+      })
+      </script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script type="text/javascript" src="js/linegraph.js"></script>
       <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
