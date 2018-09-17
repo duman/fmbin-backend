@@ -84,7 +84,7 @@ Primary use:
   border-radius: 50%;
 }
 
-select:focus {outline:0;}
+select:focus {outline-color: #57b846;}
 
 /*//////////////////////////////////////////////////////////////////
 [ RS PLUGIN ]*/
