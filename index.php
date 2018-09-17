@@ -78,7 +78,6 @@ if (session_id() == '') {
         </form>
       </div>
       <!-- javascript -->
-      <script src="js/jquery-1.11.1.min.js"></script>
       <script type="text/javascript" src="js/ajaxlivesearch.min.js"></script>
       <script>
       jQuery(document).ready(function(){
