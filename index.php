@@ -46,7 +46,7 @@ if (session_id() == '') {
       </div>
 
       <div class="chart-container" id="chart-container">
-        <center><canvas id="mycanvas"></canvas></center>
+        <center><canvas id="mycanvas" style="padding-left: 2%; padding-right: 2%;"></canvas></center>
       </div>
       <div id="my-legend-con" class="legend-con"></div>
       
