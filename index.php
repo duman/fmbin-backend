@@ -18,6 +18,7 @@
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
+    <div class="all-elements-under" id="all-elements-under">
       <div class="chart-container" id="chart-container">
         <canvas id="mycanvas"></canvas>
       </div>
@@ -52,7 +53,7 @@
           </button>
         </form>
       </div>
-      
+    </div>
       <!-- javascript -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script type="text/javascript" src="js/linegraph.js"></script>
