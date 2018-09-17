@@ -51,7 +51,7 @@ if (session_id() == '') {
       <div id="my-legend-con" class="legend-con"></div>
       
       <div class="p-t-50 p-b-60" style="display: flex;">
-        <form class="contact100-form validate-form" id="post_price" style="width: 100%, padding-right: 2%, padding-left: 2%;">
+        <form class="contact100-form validate-form" id="post_price" style="width: 100%; padding-right: 2%; padding-left: 2%;">
           <div class="wrap-input100 m-b-10 validate-input" data-validate = "Price is required">
             <input class="s2-txt1 placeholder0 input100" id="input-data" type="text" name="price" placeholder="Price" autocomplete="off">
             <span class="focus-input100"></span>
