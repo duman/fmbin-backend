@@ -98,6 +98,7 @@
               success: function() {
                 console.log("Data has been added successfully");
                 firstmaxid += 1;
+                console.log(firstmaxid);
                 $.ajax({
                   url : "../data.php?player_id=" + player_id + "&time=" + time,
                   type : "GET",
