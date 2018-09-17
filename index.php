@@ -18,8 +18,8 @@
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
-      <form action="index.php" method="post" style="margin-top: 2%;">
-        <select name="time" style="margin-right: 1%; width: 15%;">
+      <form action="index.php" method="post" name="time-submit" style="margin-top: 2%;" onsubmit="setData()">
+        <select id="time-values" name="time" style="margin-right: 1%; width: 15%;">
           <option name="time" value="1">Hourly</option>
           <option name="time" value="6">6 Hours</option>
           <option name="time" value="12">12 Hours</option>
@@ -29,7 +29,6 @@
           <option name="time" value="672">1 Month</option>
           <option name="time" value="2016">3 Months</option>
         </select>
-        <input type="hidden" name="player_id" value="<?php $_GET['player_id']; ?>"/> 
         <button type="submit" value="Submit" class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit-time" name="submit" style="width: 15%;">
           Select
         </button>
@@ -63,6 +62,13 @@
       <script src="vendor/select2/select2.min.js"></script>
       <script src="js/main.js"></script>
       <script>
+      function setData(){
+          var select = document.getElementById('time-values');
+          var time_id = select.options[select.selectedIndex].value;
+          document.time-submit.action = "index.php?player_id=" + getParameterByName('player_id'); + "&time="+ time_id;
+          time-submit.submit();
+      }
+
       function getParameterByName(name, url) {
           if (!url) url = window.location.href;
           name = name.replace(/[\[\]]/g, '\\$&');
