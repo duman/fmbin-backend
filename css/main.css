@@ -10,12 +10,14 @@ Primary use:
 [ GENERAL SETTINGS ]*/
 @media only screen and (max-width: 40em) {
   body, html{
-    display: contents;
     width: 100%;
   }
   .chart-container {
     width: 100%;
     height: auto;
+  }
+  .center {
+    display: contents !important;
   }
   *, *:before, *:after {
     padding: 0;
