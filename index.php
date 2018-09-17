@@ -18,28 +18,13 @@
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
-      <form action="index.php" method="post" name="time-submit" style="margin-top: 2%;" onsubmit="setData()">
-        <select id="time-values" name="time" style="margin-right: 1%; width: 15%;">
-          <option name="time" value="1">Hourly</option>
-          <option name="time" value="6">6 Hours</option>
-          <option name="time" value="12">12 Hours</option>
-          <option name="time" value="24">1 Day</option>
-          <option name="time" value="72">3 Day</option>
-          <option name="time" value="168">1 Week</option>
-          <option name="time" value="672">1 Month</option>
-          <option name="time" value="2016">3 Months</option>
-        </select>
-        <button type="submit" value="Submit" class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit-time" name="submit" style="width: 15%;">
-          Select
-        </button>
-      </form>
       <div class="chart-container" id="chart-container">
         <canvas id="mycanvas"></canvas>
       </div>
       <div id="my-legend-con" class="legend-con"></div>
       
-      <div class="p-t-50 p-b-60">
-        <form class="contact100-form validate-form" id="post_price">
+      <div class="p-t-50 p-b-60" style="display: flex;">
+        <form class="contact100-form validate-form" id="post_price" style="width: 100%">
           <div class="wrap-input100 m-b-10 validate-input" data-validate = "Price is required">
             <input class="s2-txt1 placeholder0 input100" id="input-data" type="text" name="price" placeholder="Price" autocomplete="off">
             <span class="focus-input100"></span>
@@ -50,6 +35,21 @@
               Submit
             </button>
           </div>
+        </form>
+        <form action="index.php" method="post" name="time-submit" onsubmit="setData()">
+          <select id="time-values" name="time" class="wrap-input100 m-b-10" style="margin-left: 10%;">
+            <option name="time" value="1">Hourly</option>
+            <option name="time" value="6">6 Hours</option>
+            <option name="time" value="12">12 Hours</option>
+            <option name="time" value="24">1 Day</option>
+            <option name="time" value="72">3 Days</option>
+            <option name="time" value="168">1 Week</option>
+            <option name="time" value="672">1 Month</option>
+            <option name="time" value="2016">3 Months</option>
+          </select>
+          <button type="submit" value="Submit" class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04" id="submit-time" name="submit" style="margin-left: 10%;">
+            Select
+          </button>
         </form>
       </div>
       
