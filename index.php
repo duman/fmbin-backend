@@ -29,7 +29,7 @@
           <option value="672">1 Month</option>
           <option value="2016">3 Months</option>
         </select>
-        <input type="submit">
+        <input type="submit" class="flex-c-m s2-txt2 size4 bg1 bor1 hov1 trans-04">
       </form>
       <div class="chart-container" id="chart-container">
         <canvas id="mycanvas"></canvas>
