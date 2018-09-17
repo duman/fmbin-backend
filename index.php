@@ -98,7 +98,7 @@
                 console.log("Data has been added successfully");
                 firstmaxid = firstmaxid + 1;
                 $.ajax({
-                  url : "../data.php?player_id=" + player_id,
+                  url : "../data.php?player_id=" + player_id + "&time=" + time,
                   type : "GET",
                   success : function(data){
                     last_report = [];
@@ -139,7 +139,7 @@
                     var min_value = [];
 
                     $.ajax({
-                      url : "../informationdata.php?player_id=" + player_id,
+                      url : "../informationdata.php?player_id=" + player_id + "&time=" + time,
                       type : "GET",
                       success : function(data){
                         for(var i in data) {

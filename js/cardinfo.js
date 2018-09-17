@@ -79,7 +79,7 @@ function doWork() {
               var min_value = [];
 
               $.ajax({
-                url : "../informationdata.php?player_id=" + player_id + "&time=" + time,,
+                url : "../informationdata.php?player_id=" + player_id + "&time=" + time,
                 type : "GET",
                 success : function(data){
                   for(var i in data) {
