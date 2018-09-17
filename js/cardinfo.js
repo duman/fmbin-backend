@@ -159,7 +159,7 @@ $(document).ready(function(){
   var time = getParameterByName('time');
   if (time === null) { time = 6; }
   $.ajax({
-    url : "../informationdata.php?player_id=" + player_id + "&time=" + time,,
+    url : "../informationdata.php?player_id=" + player_id + "&time=" + time,
     type : "GET",
     success : function(data){
       for(var i in data) {
