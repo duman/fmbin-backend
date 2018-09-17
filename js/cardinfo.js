@@ -107,6 +107,7 @@ function doWork() {
               LineGraph = new Chart(ctx, {
                 type: 'line',
                 data: chartdata,
+                pointLabelFontSize: 20,
                 options: {
                   scales: {
                     xAxes: [{

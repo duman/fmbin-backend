@@ -247,6 +247,7 @@ if (session_id() == '') {
                     LineGraph = new Chart(ctx, {
                       type: 'line',
                       data: chartdata,
+                      pointLabelFontSize: 20,
                       options: {
                         scales: {
                           xAxes: [{
