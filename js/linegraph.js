@@ -31,6 +31,7 @@ $(document).ready(function(){
             label: "Price",
             fill: false,
             lineTension: 0.1,
+            pointLabelFontSize: 20,
             backgroundColor: "rgba(59, 89, 152, 0.75)",
             borderColor: "rgba(59, 89, 152, 1)",
             pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
@@ -45,7 +46,6 @@ $(document).ready(function(){
       LineGraph = new Chart(ctx, {
         type: 'line',
         data: chartdata,
-        pointLabelFontSize: 20,
         options: {
           scales: {
             xAxes: [{

@@ -55,6 +55,7 @@ function doWork() {
                   {
                     label: "Price",
                     fill: false,
+                    pointLabelFontSize: 20,
                     lineTension: 0.1,
                     backgroundColor: "rgba(59, 89, 152, 0.75)",
                     borderColor: "rgba(59, 89, 152, 1)",
@@ -107,7 +108,6 @@ function doWork() {
               LineGraph = new Chart(ctx, {
                 type: 'line',
                 data: chartdata,
-                pointLabelFontSize: 20,
                 options: {
                   scales: {
                     xAxes: [{
