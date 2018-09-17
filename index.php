@@ -194,7 +194,7 @@ if (session_id() == '') {
                         {
                           label: "Price",
                           fill: false,
-                          pointLabelFontSize: 20,
+                          pointRadius: 20,
                           lineTension: 0.1,
                           backgroundColor: "rgba(59, 89, 152, 0.75)",
                           borderColor: "rgba(59, 89, 152, 1)",
