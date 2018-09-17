@@ -102,7 +102,13 @@ Primary use:
 }
 
 select:focus {outline-color: #57b846;}
-input:focus {outline-color: #57b846;}
+
+.ls_query:focus {
+  border-color: #57b846;
+  -webkit-box-shadow: 0 0 5px #57b846;
+  -moz-box-shadow: 0 0 5px #57b846;
+  box-shadow: 0 0 5px #57b846;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ SEARCH BOX ]*/
