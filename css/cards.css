@@ -4,6 +4,11 @@
     }
 }
 
+@font-face {
+    font-family: cardfont;
+    src: url('../fonts/Knul Medium.ttf');
+}
+
 #searchNavInput::placeholder, #searchNavInput {
     color: #FFFFFF;
 }
@@ -88,7 +93,7 @@ div.adspace_780 div ins {
 
 .fm-card .rating {
     font-size: 45px;
-    font-family: "Knul Medium";
+    font-family: cardfont;
     color: rgb(255, 255, 255);
     position: absolute;
     text-align: left;
@@ -99,7 +104,7 @@ div.adspace_780 div ins {
 
 .fm-card .position {
     font-size: 19px;
-    font-family: "Knul Medium";
+    font-family: cardfont;
     text-align: left;
     color: rgb(255, 255, 255);
     position: absolute;
@@ -111,7 +116,7 @@ div.adspace_780 div ins {
 
 .fm-card .name {
     font-size: 21px;
-    font-family: "Knul Medium";
+    font-family: cardfont;
     text-align: center;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
@@ -122,7 +127,7 @@ div.adspace_780 div ins {
 
 .fm-card .rank {
     font-size: 29px;
-    font-family: "Knul Medium";
+    font-family: cardfont;
     color: rgb(255, 255, 255);
     position: absolute;
     top: 83%;
