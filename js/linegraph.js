@@ -55,6 +55,12 @@ $(document).ready(function(){
               }
             }]
           },
+          pan: {
+            enabled: true,
+            mode: "x",
+            speed: 10,
+            threshold: 10
+          },
           responsive: true,
           legend: false,
           legendCallback: function(chart) {
