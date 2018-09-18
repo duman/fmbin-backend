@@ -76,7 +76,7 @@ $(document).ready(function(){
             },
             // Function called once panning is completed
             // Useful for dynamic data loading
-            onPan: funtion() { console.log('I was panned!!!'); }
+            onPan: function() { console.log('I was panned!!!'); }
           },
           responsive: true,
           legend: false,
