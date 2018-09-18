@@ -38,7 +38,7 @@ function doWork() {
             var time = getParameterByName('time');
             if (time === null) { time = 24; }
             $.ajax({
-            url : "../data.php?player_id=" + player_id + "&time=" + time,
+            url : "../p/data.php?player_id=" + player_id + "&time=" + time,
             type : "GET",
             success : function(data){
               last_report = [];
@@ -81,7 +81,7 @@ function doWork() {
               var min_value = [];
 
               $.ajax({
-                url : "../informationdata.php?player_id=" + player_id + "&time=" + time,
+                url : "../p/informationdata.php?player_id=" + player_id + "&time=" + time,
                 type : "GET",
                 success : function(data){
                   for(var i in data) {
@@ -200,7 +200,7 @@ $(document).ready(function(){
   var time = getParameterByName('time');
   if (time === null) { time = 24; }
   $.ajax({
-    url : "../informationdata.php?player_id=" + player_id + "&time=" + time,
+    url : "../p/informationdata.php?player_id=" + player_id + "&time=" + time,
     type : "GET",
     success : function(data){
       for(var i in data) {

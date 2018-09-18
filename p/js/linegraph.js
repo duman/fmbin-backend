@@ -13,7 +13,7 @@ $(document).ready(function(){
   var time = getParameterByName('time');
   if (time === null) { time = 24; }
   $.ajax({
-    url : "../data.php?player_id=" + player_id + "&time=" + time,
+    url : "../p/data.php?player_id=" + player_id + "&time=" + time,
     type : "GET",
     success : function(data){
       last_report = [];
