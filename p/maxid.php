@@ -19,6 +19,9 @@ if(!$mysqli){
 
 //query to get data from the table
 $sql = "SELECT MAX(id) as max_id FROM players";
+if(!empty($player_id)) {
+	$sql .= " WHERE player_id = " . $player_id;
+}
 $query = sprintf($sql);
 // SELECT cname, pos, ovr, MAX(price_value) as max_value, AVG(price_value) as avg_value, MIN(price_value) as min_value FROM information, players WHERE players.player_id = 2 AND information.player_id = 2;
 // add WHERE = player_id = "434" to make it runnable with any distinct player
