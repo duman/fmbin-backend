@@ -50,6 +50,9 @@ Primary use:
     margin-right: 2%;
     margin-left: 2%;
   }
+  .fm-card {
+    margin-left: 16.5% !important;
+  }
 }
 
 /*//////////////////////////////////////////////////////////////////
