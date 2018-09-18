@@ -9,7 +9,7 @@ Primary use:
 /*//////////////////////////////////////////////////////////////////
 [ GENERAL SETTINGS ]*/
 @media only screen and (max-width: 80em and min-width: 40em) {
-  body, html {
+  .center {
     width: 100% !important;
   }
 }
