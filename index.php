@@ -33,14 +33,14 @@ if (!$conn) {
 $sql = "SELECT cname, ovr, pos FROM information";
 $result = $conn->query($sql);
 
-$name = "";
+$cname = "";
 $ovr = "";
 $pos = "";
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        $name = $row["cname"];
+        $cname = $row["cname"];
         $ovr = $row["ovr"];
         $pos = $row["pos"];
     }
