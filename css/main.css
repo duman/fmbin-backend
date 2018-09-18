@@ -46,6 +46,10 @@ Primary use:
     padding-top: 0 !important;
     margin-top: 62em !important;
   }
+  #card-info {
+    margin-right: 2%;
+    margin-left: 2%;
+  }
 }
 
 /*//////////////////////////////////////////////////////////////////
