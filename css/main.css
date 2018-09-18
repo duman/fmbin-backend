@@ -8,7 +8,7 @@ Primary use:
 
 /*//////////////////////////////////////////////////////////////////
 [ GENERAL SETTINGS ]*/
-@media only screen and (max-width: 80em and min-width: 40em) {
+@media only screen and (max-width: 80em) and (min-width: 40em) {
   .center {
     width: 100% !important;
   }
