@@ -30,7 +30,8 @@ $conn = mysqli_connect($servername, $username, $password, $database);
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "SELECT cname, ovr, pos FROM information";
+$player_id = mysqli_real_escape_string($conn, $_REQUEST['player_id']);
+$sql = "SELECT cname, ovr, pos FROM information WHERE player_id = " . $player_id;
 $result = $conn->query($sql);
 
 $cname = "";
