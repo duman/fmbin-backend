@@ -190,7 +190,7 @@ mysqli_close($conn);
           var select = document.getElementById('time-values');
           var time_id = select.options[select.selectedIndex].value;
           var parameters = "?player_id=" + getParameterByName('player_id') + "&time="+ time_id;
-          window.open("https://beta.fmbin.com/" + parameters,"_self"); // TODO: change this link when out of beta
+          window.open("https://beta.fmbin.com/p/" + parameters,"_self"); // TODO: change this link when out of beta
       }
 
       function removeData(chart) {
