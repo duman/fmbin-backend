@@ -22,6 +22,9 @@ Primary use:
     height: auto !important;
     width: 100% !important;
   }
+  .all-under {
+    margin-left: 50% !important;
+  }
 }
 
 @media only screen and (max-width: 40em) {
