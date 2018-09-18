@@ -24,8 +24,9 @@ function removeElement(id) {
 var maxid = [];
 firstmaxid = 0;
 function doWork() {
+  var player_id = getParameterByName('player_id');
     $.ajax({
-      url : "../p/maxid.php",
+      url : "../p/maxid.php?player_id=" + player_id,
       type : "GET",
       success : function(data){
         for(var i in data) {
@@ -34,7 +35,6 @@ function doWork() {
         if (maxid[0] > firstmaxid) {
             firstmaxid = maxid[0];
             maxid = [];
-            var player_id = getParameterByName('player_id');
             var time = getParameterByName('time');
             if (time === null) { time = 24; }
             $.ajax({

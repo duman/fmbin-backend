@@ -207,8 +207,9 @@ mysqli_close($conn);
       }
 
       function submit() {
+        var player_id = getParameterByName('player_id');
         $.ajax({
-          url : "../p/maxid.php",
+          url : "../p/maxid.php?player_id" + player_id,
           type : "GET",
           success : function(data){
             for(var i in data) {
@@ -220,7 +221,6 @@ mysqli_close($conn);
           error : function(data) {
           }
         });
-        var player_id = getParameterByName('player_id');
         var time = getParameterByName('time');
         if (time === null) { time = 24; }
         $("form").submit(function(e) {
