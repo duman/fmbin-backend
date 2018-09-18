@@ -91,9 +91,9 @@ mysqli_close($conn);
         <span class="rank"></span>
       </div>
 
-      <div id="HCB_comment_box" class="disqus">Loading comments...</div>
+      <div id="HCB_comment_box" class="disqus" style="position: absolute; width: 46%; padding-left: 2%; padding-top: 25%;">Loading comments...</div>
       <link rel="stylesheet" type="text/css" href="//www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
-      <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24r82QiH4grqeyeyKU3iQRz0"+"&opts=16862&num=10&ts=1537271403321");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>                          
+      <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="//www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24r82QiH4grqeyeyKU3iQRz0"+"&opts=16862&num=10&ts=1537271403321");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>  
 
       <div class="all-under" id="all-under" style="margin-left: 40em;">
         <div class="chart-container" id="chart-container">
