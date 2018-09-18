@@ -106,6 +106,8 @@ function doWork() {
               
               ctx = $("#mycanvas");
 
+              var timeFormat = "MM/DD/YYYY HH:mm";
+
               LineGraph = new Chart(ctx, {
                 type: 'line',
                 data: chartdata,
