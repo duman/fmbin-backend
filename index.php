@@ -15,6 +15,41 @@ if (session_id() == '') {
     $handler->getJavascriptAntiBot();
 ?>
 
+<?php
+$servername = "localhost";
+$database = "admin_fmbin";
+$username = "admin_fmbin";
+$password = "anka0606ankA";
+
+// Create connection
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+// Check connection
+
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+$sql = "SELECT cname, ovr, pos FROM information";
+$result = $conn->query($sql);
+
+$name = "";
+$ovr = "";
+$pos = "";
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $name = $row["cname"];
+        $ovr = $row["ovr"];
+        $pos = $row["pos"];
+    }
+} else {
+    echo "0 results";
+}
+mysqli_close($conn);
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -49,9 +84,9 @@ if (session_id() == '') {
         <img class="background" src="https://cdn-p2.fifarenderz.com/fifamobile/images/backgrounds/backgrounds_RVS2.png">
         <img class="player-img" src="https://cdn-p2.fifarenderz.com/fifamobile/images/players/p190778_R.png" onerror="this.src='https://eaassets-a.akamaihd.net/fifa/u/f/fm18/prod2/s/static/players/players_18/p0.png'">
         <img class="club-img" src="https://cdn-p2.fifarenderz.com/fifamobile/images/programs/program_17_RETRO.png">
-        <span class="rating">100</span>
-        <span class="position">GK</span>
-        <span class="name">Zoet</span>
+        <span class="rating"><?php echo $ovr; ?></span>
+        <span class="position"><?php echo $pos; ?></span>
+        <span class="name"><?php echo $cname; ?></span>
         <span class="rank"></span>
       </div>
       <div class="all-under" id="all-under" style="margin-left: 40em;">
