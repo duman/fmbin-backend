@@ -315,6 +315,33 @@ mysqli_close($conn);
                             }
                           }]
                         },
+                        scales: {
+                          xAxes: [
+                            {
+                              type: "time",
+                              time: {
+                                format: timeFormat,
+                                // round: 'day'
+                                tooltipFormat: "ll HH:mm"
+                              },
+                              scaleLabel: {
+                                display: false,
+                                labelString: "Date"
+                              },
+                              ticks: {
+                                maxRotation: 0
+                              }
+                            }
+                          ],
+                          yAxes: [
+                            {
+                              scaleLabel: {
+                                display: false,
+                                labelString: "value"
+                              }
+                            }
+                          ]
+                        },
                         pan: {
                           enabled: true,
                           mode: "x",
