@@ -324,16 +324,14 @@ mysqli_close($conn);
 
                           // Panning directions. Remove the appropriate direction to disable 
                           // Eg. 'y' would only allow panning in the y direction
-                          mode: 'xy',
+                          mode: 'x',
                           rangeMin: {
                             // Format of min pan range depends on scale type
-                            x: null,
-                            y: null
+                            x: 1
                           },
                           rangeMax: {
                             // Format of max pan range depends on scale type
-                            x: null,
-                            y: null
+                            x: 10
                           },
                           // Function called once panning is completed
                           // Useful for dynamic data loading
