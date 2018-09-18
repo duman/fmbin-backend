@@ -112,7 +112,11 @@ Primary use:
   border-radius: 50%;
 }
 
-select:focus {outline-color: #57b846;}
+select:focus {
+  outline-color: transparent;
+  box-shadow: 0 0 2pt 1pt #57b846;
+  border-radius: 9px;
+}
 
 .ls_query:focus {
   border-color: #57b846 !important;
