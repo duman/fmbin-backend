@@ -25,7 +25,7 @@ var maxid = [];
 firstmaxid = 0;
 function doWork() {
     $.ajax({
-      url : "../maxid.php",
+      url : "../p/maxid.php",
       type : "GET",
       success : function(data){
         for(var i in data) {

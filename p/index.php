@@ -208,7 +208,7 @@ mysqli_close($conn);
 
       function submit() {
         $.ajax({
-          url : "../maxid.php",
+          url : "../p/maxid.php",
           type : "GET",
           success : function(data){
             for(var i in data) {
