@@ -57,7 +57,7 @@ $(document).ready(function(){
               }
             }]
           },
-          pan: {
+          /*pan: {
             // Boolean to enable panning
             enabled: true,
 
@@ -75,7 +75,7 @@ $(document).ready(function(){
             // Function called once panning is completed
             // Useful for dynamic data loading
             onPan: function() { console.log('I was panned!!!'); }
-          },
+          },*/
           responsive: true,
           legend: false,
           legendCallback: function(chart) {

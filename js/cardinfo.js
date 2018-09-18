@@ -119,7 +119,7 @@ function doWork() {
                       }
                     }]
                   },
-                  pan: {
+                  /*pan: {
                     // Boolean to enable panning
                     enabled: true,
 
@@ -137,7 +137,7 @@ function doWork() {
                     // Function called once panning is completed
                     // Useful for dynamic data loading
                     onPan: function() { console.log('I was panned!!!'); }
-                  },
+                  },*/
                   responsive: true,
                   legend: false,
                   legendCallback: function(chart) {

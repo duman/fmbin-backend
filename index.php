@@ -171,7 +171,6 @@ mysqli_close($conn);
       </script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script type="text/javascript" src="js/linegraph.js"></script>
-      <script type="text/javascript" src="js/chartjs-plugin-zoom.min.js"></script>
       <script src="vendor/bootstrap/js/popper.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
       <script src="vendor/select2/select2.min.js"></script>
@@ -318,7 +317,7 @@ mysqli_close($conn);
                             }
                           }]
                         },
-                        pan: {
+                        /*pan: {
                           // Boolean to enable panning
                           enabled: true,
 
@@ -336,7 +335,7 @@ mysqli_close($conn);
                           // Function called once panning is completed
                           // Useful for dynamic data loading
                           onPan: function() { console.log('I was panned!!!'); }
-                        },
+                        },*/
                         responsive: true,
                         legend: false,
                         legendCallback: function(chart) {
