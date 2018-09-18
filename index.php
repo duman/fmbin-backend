@@ -322,7 +322,7 @@ mysqli_close($conn);
                             {
                               type: "time",
                               time: {
-                                format: timeFormat,
+                                parser: timeFormat,
                                 // round: 'day'
                                 tooltipFormat: "ll HH:mm"
                               },

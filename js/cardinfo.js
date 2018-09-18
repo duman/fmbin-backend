@@ -124,7 +124,7 @@ function doWork() {
                       {
                         type: "time",
                         time: {
-                          format: timeFormat,
+                          parser: timeFormat,
                           // round: 'day'
                           tooltipFormat: "ll HH:mm"
                         },
