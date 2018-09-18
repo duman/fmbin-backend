@@ -90,6 +90,17 @@ mysqli_close($conn);
         <span class="name"><?php echo $cname; ?></span>
         <span class="rank"></span>
       </div>
+
+      <div id="disqus_thread"></div>
+      <script>
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://fmbin.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+      </script>                            
+
       <div class="all-under" id="all-under" style="margin-left: 40em;">
         <div class="chart-container" id="chart-container">
           <center><canvas id="mycanvas" style="padding-left: 2%; padding-right: 2%;"></canvas></center>
