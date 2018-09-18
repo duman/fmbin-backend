@@ -76,7 +76,6 @@ mysqli_close($conn);
     <link rel="stylesheet" type="text/css" href="css/cards.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/cardinfo.js"></script>
-    <script type="text/javascript" src="js/chartjs-plugin-zoom.min.js"></script>
   </head>
   <body class="center">
       <div style="clear: both">
@@ -172,6 +171,7 @@ mysqli_close($conn);
       </script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
       <script type="text/javascript" src="js/linegraph.js"></script>
+      <script type="text/javascript" src="js/chartjs-plugin-zoom.min.js"></script>
       <script src="vendor/bootstrap/js/popper.js"></script>
       <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
       <script src="vendor/select2/select2.min.js"></script>
