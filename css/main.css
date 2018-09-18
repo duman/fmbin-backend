@@ -16,7 +16,11 @@ Primary use:
     padding-top: 20em !important;
   }
   .chart-container {
-    width: auto;
+    width: auto !important;
+  }
+  #mycanvas {
+    height: auto !important;
+    width: 100% !important;
   }
 }
 
