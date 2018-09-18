@@ -211,7 +211,7 @@ mysqli_close($conn);
         });
         var player_id = getParameterByName('player_id');
         var time = getParameterByName('time');
-        if (time === null) { time = 6; }
+        if (time === null) { time = 24; }
         $("form").submit(function(e) {
           e.preventDefault();
           var input = document.getElementById('input-data').value;

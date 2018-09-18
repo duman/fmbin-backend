@@ -11,7 +11,7 @@ function getParameterByName(name, url) {
 $(document).ready(function(){
   var player_id = getParameterByName('player_id');
   var time = getParameterByName('time');
-  if (time === null) { time = 6; }
+  if (time === null) { time = 24; }
   $.ajax({
     url : "../data.php?player_id=" + player_id + "&time=" + time,
     type : "GET",
