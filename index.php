@@ -37,6 +37,7 @@ if (session_id() == '') {
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/animation.css">
     <link rel="stylesheet" type="text/css" href="css/ajaxlivesearch.min.css">
+    <link rel="stylesheet" type="text/css" href="css/cards.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>

@@ -1,0 +1,215 @@
+@media screen and (min-width: 992px) {
+    .sidebar {
+        margin-top: 30px;
+    }
+}
+
+#searchNavInput::placeholder, #searchNavInput {
+    color: #FFFFFF;
+}
+
+.filter-purple:after {
+    background: rgba(132,13,121,.88);
+    background: linear-gradient(45deg,rgba(132,13,121,.88),rgba(208,44,180,.31));
+    background: -webkit-linear-gradient(135deg,rgba(132,13,121,.88),rgba(208,44,180,.31));
+}
+
+.modal-backdrop {
+    background: rgba(0,0,0,1);
+}
+
+.modal-backdrop.show {
+    opacity: .56;
+}
+
+div.adspace_780 {
+    width: 100%;
+    overflow-y: hidden;
+}
+
+div.adspace_780 img,
+div.pc_block_active,
+div.adspace_780 div {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+div.adspace_780 div {
+    text-align: center;
+}
+
+div.adspace_780 div ins {
+    display: inline-block !important;
+}
+
+.fm-card {
+    width: 256px;
+    height: 256px;
+    position: relative;
+    line-height: 1.2;
+    -webkit-text-size-adjust: auto;
+    text-size-adjust: auto;
+}
+
+.fm-card-img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.fm-card-img .player-img {
+    position: absolute;
+}
+
+.fm-card-img .background {
+    position: absolute;
+}
+
+.fm-card .player-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.fm-card .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.fm-card .club-img {
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    top: 46.5%;
+    left: 18.2%;
+}
+
+.fm-card .rating {
+    font-size: 45px;
+    font-family: "Knul Medium";
+    color: rgb(255, 255, 255);
+    position: absolute;
+    text-align: left;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.7);
+    top: 15.5%;
+    left: 19.5%;
+}
+
+.fm-card .position {
+    font-size: 19px;
+    font-family: "Knul Medium";
+    text-align: left;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.7);
+    top: 35.5%;
+    left: 20.4%;
+}
+
+.fm-card .name {
+    font-size: 21px;
+    font-family: "Knul Medium";
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    top: 66.3%;
+}
+
+.fm-card .rank {
+    font-size: 29px;
+    font-family: "Knul Medium";
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 83%;
+    width: 100%;
+    text-align: center;
+}
+
+.fm-card.worldcup .club-img {
+    left: 20.2%;
+}
+
+.fm-card.worldcup .rating {
+    left: 22%;
+    top: 16.5%;
+}
+
+.fm-card.worldcup .position {
+    top: 35.5%;
+    left: 23%;
+}
+
+.fm-card.worldcup .name {
+    top: 67.5%;
+}
+
+.fm-card.worldcupnq .club-img {
+    left: 20%;
+}
+
+.fm-card.worldcupnq .rating {
+    left: 20.5%;
+    top: 2.5%;
+}
+
+.fm-card.worldcupnq .position {
+    top: 21.5%;
+    left: 21%;
+}
+
+.fm-card.worldcupnq .name {
+    top: 69.5%;
+}
+
+.fm-card.worldcupnq .rank {
+    top: 84%;
+}
+
+.fm-card.bronze {
+    background: url('../img/cards/Bronze.png');
+    background-size: cover;
+}
+
+.fm-card.silver {
+    background: url('../img/cards/Silver.png');
+    background-size: cover;
+}
+
+.fm-card.gold {
+    background: url('../img/cards/Gold.png');
+    background-size: cover;
+}
+
+.fm-card.elite {
+    background: url('../img/cards/Elite.png');
+    background-size: cover;
+}
+
+.fm-card.master {
+    background: url('../img/cards/Master.png');
+    background-size: cover;
+}
+
+.fm-card.legendary {
+    background: url('../img/cards/Legendary.png');
+    background-size: cover;
+}
+
+#wpac-comment {
+    margin-top: 1em;
+}
+
+.wp-copyright,
+#wpac-comment .wp-copyright {
+    visibility: hidden !important;
+}
+
+.wp-comment-stars,
+#wpac-comment .wp-comment-stars {
+    visibility: hidden !important;
+}
