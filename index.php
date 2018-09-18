@@ -45,7 +45,16 @@ if (session_id() == '') {
       <div style="clear: both">
         <input type="text" class='mySearch' id="ls_query" placeholder="Type to start searching ...">
       </div>
-      <div class="all-under" id="all-under">
+      <div class="fm-card" style="position: absolute; margin-top: 2em; margin-left: 13%;">
+        <img class="background" src="https://cdn-p2.fifarenderz.com/fifamobile/images/backgrounds/backgrounds_RVS2.png">
+        <img class="player-img" src="https://cdn-p2.fifarenderz.com/fifamobile/images/players/p190778_R.png" onerror="this.src='https://eaassets-a.akamaihd.net/fifa/u/f/fm18/prod2/s/static/players/players_18/p0.png'">
+        <img class="club-img" src="https://cdn-p2.fifarenderz.com/fifamobile/images/programs/program_17_RETRO.png">
+        <span class="rating">100</span>
+        <span class="position">GK</span>
+        <span class="name">Zoet</span>
+        <span class="rank"></span>
+      </div>
+      <div class="all-under" id="all-under" style="margin-left: 40em;">
         <div class="chart-container" id="chart-container">
           <center><canvas id="mycanvas" style="padding-left: 2%; padding-right: 2%;"></canvas></center>
         </div>
