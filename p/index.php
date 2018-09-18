@@ -91,7 +91,7 @@ mysqli_close($conn);
         <span class="rank"></span>
       </div>
 
-      <div id="disqus_thread" class="disqus" style="position: absolute; width: 46%; padding-left: 2%; padding-top: 25%;"></div>
+      <div id="disqus_thread" class="disqus" style="position: absolute; width: 46%; padding-left: 2%; padding-right: 2%; padding-top: 25%;"></div>
       <script>
         (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
