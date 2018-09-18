@@ -336,6 +336,11 @@ mysqli_close($conn);
                           // Useful for dynamic data loading
                           onPan: function() { console.log('I was panned!!!'); }
                         },*/
+                        layout: {
+                          padding: {
+                              right: 20,
+                          }
+                        },
                         responsive: true,
                         legend: false,
                         legendCallback: function(chart) {
