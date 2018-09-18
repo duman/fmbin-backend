@@ -57,38 +57,26 @@ $(document).ready(function(){
               }
             }]
           },
-          scales: {
-            xAxes: [
-              {
-                type: "time",
-                time: {
-                  parser: timeFormat,
-                  // round: 'day'
-                  tooltipFormat: "ll HH:mm"
-                },
-                scaleLabel: {
-                  display: false,
-                  labelString: "Date"
-                },
-                ticks: {
-                  maxRotation: 0
-                }
-              }
-            ],
-            yAxes: [
-              {
-                scaleLabel: {
-                  display: false,
-                  labelString: "value"
-                }
-              }
-            ]
-          },
           pan: {
+            // Boolean to enable panning
             enabled: true,
-            mode: "x",
-            speed: 10,
-            threshold: 10
+
+            // Panning directions. Remove the appropriate direction to disable 
+            // Eg. 'y' would only allow panning in the y direction
+            mode: 'xy',
+            rangeMin: {
+              // Format of min pan range depends on scale type
+              x: null,
+              y: null
+            },
+            rangeMax: {
+              // Format of max pan range depends on scale type
+              x: null,
+              y: null
+            },
+            // Function called once panning is completed
+            // Useful for dynamic data loading
+            onPan: funtion() { console.log('I was panned!!!'); }
           },
           responsive: true,
           legend: false,
