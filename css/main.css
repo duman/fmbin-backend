@@ -12,6 +12,9 @@ Primary use:
   .center {
     width: 100% !important;
   }
+  .disqus {
+    padding-top: 20em !important;
+  }
 }
 
 @media only screen and (max-width: 40em) {
