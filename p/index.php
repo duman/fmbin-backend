@@ -86,7 +86,7 @@ mysqli_close($conn);
           <a href="https://discord.gg/fm"><img src="img/discord.png"></a>
         </div>
         <div class="discord-mobile-logo">
-          <a href="https://discord.gg/fm"><img src="img/discord-logo.png"></a>
+          <a href="https://discord.gg/fm"><img src="img/discord-mobile.png"></a>
         </div>
       </div>
       <div style="clear: both">
