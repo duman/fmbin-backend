@@ -98,6 +98,9 @@ Primary use:
   .site-logo {
     padding-left: 4%;
   }
+  .discord-logo {
+    display: none;
+  }
 }
 
 /*//////////////////////////////////////////////////////////////////
