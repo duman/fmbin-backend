@@ -85,6 +85,9 @@ mysqli_close($conn);
         <div class="site-logo">
           <a href="https://beta.fmbin.com/"><img src="img/logo.png"></a>
         </div>
+        <div class="reddit-logo">
+          <a href="https://www.reddit.com/r/futmobile"><img src="img/reddit.png"></a>
+        </div>
         <div class="discord-logo">
           <a href="https://discord.gg/fm"><img src="img/discord.png"></a>
         </div>

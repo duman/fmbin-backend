@@ -30,6 +30,12 @@ Primary use:
   right: -210px;
 }
 
+.reddit-logo {
+  width: 415px;
+  position: absolute;
+  right: -420px;
+}
+
 .wrap-pic1 {
   display: flex;
 }
