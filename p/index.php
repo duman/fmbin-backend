@@ -78,6 +78,9 @@ mysqli_close($conn);
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
+      <div style="clear: both">
+        <input type="text" class='mySearch' id="ls_query" placeholder="Type to start searching ...">
+      </div>
       <div class="wrap-pic1">
         <div class="site-logo">
           <a href="https://beta.fmbin.com/"><img src="img/logo.png"></a>
@@ -88,9 +91,6 @@ mysqli_close($conn);
         <div class="discord-mobile-logo">
           <a href="https://discord.gg/fm"><img src="img/discord-mobile.png"></a>
         </div>
-      </div>
-      <div style="clear: both">
-        <input type="text" class='mySearch' id="ls_query" placeholder="Type to start searching ...">
       </div>
       <div class="fm-card" style="position: absolute; margin-top: 2em; margin-left: 13%; -webkit-font-smoothing: subpixel-antialiased; backface-visibility: hidden;">
         <img class="background" src="img/card-clng.png">
