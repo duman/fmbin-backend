@@ -80,6 +80,7 @@ mysqli_close($conn);
   <body class="center">
       <div class="wrap-pic1">
         <a href="https://beta.fmbin.com/"><img src="img/logo.png"></a>
+        <a href="https://discord.gg/fm"><img src="img/discord.png"></a>
       </div>
       <div style="clear: both">
         <input type="text" class='mySearch' id="ls_query" placeholder="Type to start searching ...">
