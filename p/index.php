@@ -78,6 +78,9 @@ mysqli_close($conn);
     <script type="text/javascript" src="js/cardinfo.js"></script>
   </head>
   <body class="center">
+      <div class="wrap-pic1">
+        <a href="https://beta.fmbin.com/"><img src="img/logo.png"></a>
+      </div>
       <div style="clear: both">
         <input type="text" class='mySearch' id="ls_query" placeholder="Type to start searching ...">
       </div>
