@@ -31,9 +31,11 @@ Primary use:
 }
 
 .reddit-logo {
-  width: 415px;
+  width: 400px;
+  margin-top: -4px;
   position: absolute;
-  right: -420px;
+  right: 0px;
+  transform: scale(0.73);
 }
 
 .wrap-pic1 {
@@ -41,6 +43,10 @@ Primary use:
 }
 
 .discord-mobile-logo {
+  display: none;
+}
+
+.reddit-mobile-logo {
   display: none;
 }
 
@@ -117,10 +123,20 @@ Primary use:
     right: 0px !important;
     display: inherit !important;
   }
+  .reddit-mobile-logo {
+    width: 45px !important;
+    position: absolute;
+    right: 45px !important;
+    display: inherit !important;
+    transform: scale(0.73);
+  }
   .site-logo {
     padding-left: 4%;
   }
   .discord-logo {
+    display: none !important;
+  }
+  .reddit-logo {
     display: none !important;
   }
 }
