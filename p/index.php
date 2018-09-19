@@ -99,7 +99,6 @@ mysqli_close($conn);
         <span class="rating"><?php echo $ovr; ?></span>
         <span class="position"><?php echo $pos; ?></span>
         <span class="name"><?php echo $cname; ?></span>
-        <span class="rank"></span>
       </div>
 
       <div id="disqus_thread" class="disqus" style="position: absolute; width: 46%; padding-left: 2%; padding-right: 2%; padding-top: 25%;"></div>
