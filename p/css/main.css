@@ -91,9 +91,10 @@ Primary use:
     max-width: 100% !important;
   }
   .discord-mobile-logo {
-    width: 130px !important;
+    width: 45px !important;
     position: absolute;
     right: 0px !important;
+    display: inherit !important;
   }
   .site-logo {
     padding-left: 4%;
