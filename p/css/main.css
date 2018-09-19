@@ -126,7 +126,9 @@ Primary use:
   .reddit-mobile-logo {
     width: 45px !important;
     position: absolute;
-    right: 45px !important;
+    margin-right: 45px !important;
+    margin-top: -3px;
+    right: 0px !important;
     display: inherit !important;
     transform: scale(0.73);
   }
