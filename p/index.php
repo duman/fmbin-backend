@@ -82,9 +82,9 @@ mysqli_close($conn);
         <input type="text" class='mySearch' id="ls_query" placeholder="Type to start searching ...">
       </div>
       <div class="fm-card" style="position: absolute; margin-top: 2em; margin-left: 13%; -webkit-font-smoothing: subpixel-antialiased; backface-visibility: hidden;">
-        <img class="background" src="https://cdn-p2.fifarenderz.com/fifamobile/images/backgrounds/backgrounds_RVS2.png">
-        <img class="player-img" src="https://cdn-p2.fifarenderz.com/fifamobile/images/players/p190778_R.png" onerror="this.src='https://eaassets-a.akamaihd.net/fifa/u/f/fm18/prod2/s/static/players/players_18/p0.png'">
-        <img class="club-img" src="https://cdn-p2.fifarenderz.com/fifamobile/images/programs/program_17_RETRO.png">
+        <img class="background" src="img/card.png">
+        <img class="player-img" src="https://cdn-p2.fifarenderz.com/fifamobile/images/players/p<?php echo $player_id; ?>.png" onerror="this.src='https://eaassets-a.akamaihd.net/fifa/u/f/fm18/prod2/s/static/players/players_18/p0.png'">
+        <img class="club-img" src="img/club.png">
         <span class="rating"><?php echo $ovr; ?></span>
         <span class="position"><?php echo $pos; ?></span>
         <span class="name"><?php echo $cname; ?></span>
