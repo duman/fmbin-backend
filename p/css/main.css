@@ -8,6 +8,17 @@ Primary use:
 
 /*//////////////////////////////////////////////////////////////////
 [ GENERAL SETTINGS ]*/
+
+.discord-logo {
+  width: 415px;
+  position: absolute;
+  right: -210px;
+}
+
+.wrap-pic1 {
+  display: flex;
+}
+
 @media only screen and (max-width: 80em) and (min-width: 40em) {
   .center {
     width: 100% !important;
