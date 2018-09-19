@@ -91,6 +91,9 @@ mysqli_close($conn);
         <div class="discord-logo">
           <a href="https://discord.gg/fm"><img src="img/discord.png"></a>
         </div>
+        <div class="reddit-mobile-logo">
+          <a href="https://www.reddit.com/r/futmobile"><img src="img/reddit-mobile.png"></a>
+        </div>
         <div class="discord-mobile-logo">
           <a href="https://discord.gg/fm"><img src="img/discord-mobile.png"></a>
         </div>
