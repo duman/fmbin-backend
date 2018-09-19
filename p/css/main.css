@@ -72,6 +72,9 @@ Primary use:
   .fm-card {
     margin-left: 16.5% !important;
   }
+  .wrap-pic1 img {
+    max-width: 100% !important;
+  }
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -583,7 +586,7 @@ input.input100 {
   color: black;
 }
 .wrap-pic1 img {
-  max-width: 100%;
+  max-width: 50%;
 }
 
 
