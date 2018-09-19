@@ -99,7 +99,7 @@ Primary use:
     padding-left: 4%;
   }
   .discord-logo {
-    display: none;
+    display: none !important;
   }
 }
 
