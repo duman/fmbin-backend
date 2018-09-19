@@ -85,6 +85,9 @@ mysqli_close($conn);
         <div class="discord-logo">
           <a href="https://discord.gg/fm"><img src="img/discord.png"></a>
         </div>
+        <div class="discord-mobile-logo">
+          <a href="https://discord.gg/fm"><img src="img/discord-logo.png"></a>
+        </div>
       </div>
       <div style="clear: both">
         <input type="text" class='mySearch' id="ls_query" placeholder="Type to start searching ...">

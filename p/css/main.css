@@ -19,6 +19,10 @@ Primary use:
   display: flex;
 }
 
+.discord-mobile-logo {
+  display: none;
+}
+
 @media only screen and (max-width: 80em) and (min-width: 40em) {
   .center {
     width: 100% !important;
@@ -85,6 +89,14 @@ Primary use:
   }
   .wrap-pic1 img {
     max-width: 100% !important;
+  }
+  .discord-mobile-logo {
+    width: 130px !important;
+    position: absolute;
+    right: 0px !important;
+  }
+  .site-logo {
+    padding-left: 4%;
   }
 }
 
