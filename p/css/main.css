@@ -9,6 +9,10 @@ Primary use:
 /*//////////////////////////////////////////////////////////////////
 [ GENERAL SETTINGS ]*/
 
+.site-logo {
+  padding-left: 1%;
+}
+
 .discord-logo {
   width: 415px;
   position: absolute;
