@@ -256,7 +256,19 @@ mysqli_close($conn);
               data: $('form').serialize(),
               success: function() {
                 console.log("Data has been added successfully");
-                firstmaxid++;
+                $.ajax({
+                  url : "../p/maxid.php?player_id=" + player_id,
+                  type : "GET",
+                  success : function(data){
+                    for(var i in data) {
+                      maxid.push(data[i].max_id);
+                    }
+                    firstmaxid = maxid[0];
+                    maxid = [];
+                  },
+                  error : function(data) {
+                  }
+                });
                 $.ajax({
                   url : "../p/data.php?player_id=" + player_id + "&time=" + time,
                   type : "GET",
