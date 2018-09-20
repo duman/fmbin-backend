@@ -1,7 +1,7 @@
 <?php
 
 if(!isset($_GET['player_id'])){
-    header('Location: https://beta.fmbin.com/p/?player_id=1');
+    header('Location: https://beta.fmbin.com/p/?player_id=231936');
 }
 
 $DS = DIRECTORY_SEPARATOR;
