@@ -31,19 +31,21 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 $player_id = mysqli_real_escape_string($conn, $_REQUEST['player_id']);
-$sql = "SELECT cname, ovr, pos FROM information WHERE player_id = " . $player_id;
+$sql = "SELECT cname, Novr, Nposition, NplayerId FROM Ncard WHERE Nid = " . $player_id;
 $result = $conn->query($sql);
 
 $cname = "";
 $ovr = "";
 $pos = "";
+$base_number = "";
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
         $cname = $row["cname"];
-        $ovr = $row["ovr"];
-        $pos = $row["pos"];
+        $ovr = $row["Novr"];
+        $pos = $row["Nposition"];
+        $base_number = $row["NplayerId"];
     }
 } else {
     echo "0 results";
@@ -100,7 +102,7 @@ mysqli_close($conn);
       </div>
       <div class="fm-card" style="position: absolute; margin-top: 2em; margin-left: 13%; -webkit-font-smoothing: subpixel-antialiased; backface-visibility: hidden;">
         <img class="background" src="img/card-clng.png">
-        <img class="player-img" src="https://eaassets-a.akamaihd.net/fifa/u/f/fm18/prod2/s/static/players/players_18/p<?php echo $player_id; ?>.png" onerror="this.src='https://eaassets-a.akamaihd.net/fifa/u/f/fm18/prod2/s/static/players/players_18/p0.png'">
+        <img class="player-img" src="https://eaassets-a.akamaihd.net/fifa/u/f/fm18/prod2/s/static/players/players_18/p<?php echo $base_number; ?>.png" onerror="this.src='https://eaassets-a.akamaihd.net/fifa/u/f/fm18/prod2/s/static/players/players_18/p0.png'">
         <img class="club-img" src="img/club.png">
         <span class="rating"><?php echo $ovr; ?></span>
         <span class="position"><?php echo $pos; ?></span>
