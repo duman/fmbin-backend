@@ -19,9 +19,9 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$sql = "SELECT cname, pos, ovr, MAX(price_value) as max_value, AVG(price_value) as avg_value, MIN(price_value) as min_value FROM information, players";
+$sql = "SELECT cname, Nposition, Novr, MAX(price_value) as max_value, AVG(price_value) as avg_value, MIN(price_value) as min_value FROM players, Ncard";
 if(!empty($player_id)) {
-	$sql .= " WHERE players.player_id = " . $player_id . " AND information.player_id = " . $player_id;
+	$sql .= " WHERE players.player_id = " . $player_id . " AND Ncard.Nid = " . $player_id;
 }
 if(!empty($time)) {
 	$sql .= " AND last_report > NOW() - INTERVAL " . $time . " HOUR";
