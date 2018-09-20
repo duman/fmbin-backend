@@ -19,7 +19,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$sql = "SELECT cname, Nposition, Novr, MAX(price_value) as max_value, AVG(price_value) as avg_value, MIN(price_value) as min_value FROM players, Ncard";
+$sql = "SELECT cname, Nposition as pos, Novr as ovr, MAX(price_value) as max_value, AVG(price_value) as avg_value, MIN(price_value) as min_value FROM players, Ncard";
 if(!empty($player_id)) {
 	$sql .= " WHERE players.player_id = " . $player_id . " AND Ncard.Nid = " . $player_id;
 }
