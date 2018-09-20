@@ -1,5 +1,25 @@
 <?php
 
+if (strstr(curPageURL(), 'https://beta.fmbin.com/p/')) === TRUE) {
+  header("Location: https://fmbin.com");
+  die();
+}
+
+if (strstr(curPageURL(), 'http://beta.fmbin.com/p/')) === TRUE) {
+  header("Location: https://fmbin.com");
+  die();
+}
+
+if (strstr(curPageURL(), 'https://beta.fmbin.com/p')) === TRUE) {
+  header("Location: https://fmbin.com");
+  die();
+}
+
+if (strstr(curPageURL(), 'http://beta.fmbin.com/p')) === TRUE) {
+  header("Location: https://fmbin.com");
+  die();
+}
+
 $DS = DIRECTORY_SEPARATOR;
 file_exists(__DIR__ . $DS . 'core' . $DS . 'Handler.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Handler.php' : die('Handler.php not found');
 file_exists(__DIR__ . $DS . 'core' . $DS . 'Config.php') ? require_once __DIR__ . $DS . 'core' . $DS . 'Config.php' : die('Config.php not found');
