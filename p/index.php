@@ -1,23 +1,7 @@
 <?php
 
-if (strstr(curPageURL(), 'https://beta.fmbin.com/p/')) === TRUE) {
-  header("Location: https://fmbin.com");
-  die();
-}
-
-if (strstr(curPageURL(), 'http://beta.fmbin.com/p/')) === TRUE) {
-  header("Location: https://fmbin.com");
-  die();
-}
-
-if (strstr(curPageURL(), 'https://beta.fmbin.com/p')) === TRUE) {
-  header("Location: https://fmbin.com");
-  die();
-}
-
-if (strstr(curPageURL(), 'http://beta.fmbin.com/p')) === TRUE) {
-  header("Location: https://fmbin.com");
-  die();
+if(!isset($_GET['player_id'])){
+    header('Location: https://beta.fmbin.com/?player_id=1');
 }
 
 $DS = DIRECTORY_SEPARATOR;
