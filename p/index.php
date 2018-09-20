@@ -24,6 +24,7 @@ $password = "anka0606ankA";
 // Create connection
 
 $conn = mysqli_connect($servername, $username, $password, $database);
+$conn->set_charset("utf8");
 
 // Check connection
 
